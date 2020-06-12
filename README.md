@@ -1,3 +1,8 @@
-# spesifikasjon-for-beskrivelse-av-formal-og-hjemmel
-Spesifikasjon for beskrivelse av formål og hjemmel  
-Gjeldende versjon er publisert her: https://doc.difi.no/data/spesifikasjon-for-beskrivelse-av-formal-og-hjemmel/
+# Spesifikasjon for beskrivelse av formål og hjemmel
+
+For forvaltning av _Spesifikasjon for beskrivels av formål og hjemmel_.
+
+Gjeldende versjon blir publisert til https://data.norge.no/specification/spesifikasjon-for-beskrivelse-av-formal-og-hjemmel/
+
+
+\- _Digitaliseringsdorektoratet / Norwegian Digitalisation Agency (https://digdir.no/)_
