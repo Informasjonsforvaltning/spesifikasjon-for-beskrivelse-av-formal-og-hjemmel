@@ -12,8 +12,7 @@ Arbeidsgruppen er imidlertid kommet til at brukerbehovet antagelig dekkes implis
 
 Arbeidsgruppen har vurdert om datakatalogen bør ha et valgfritt felt som beskriver datasettets opphav.
 
-Bakgrunnen for diskusjonen var at det forelå et behov for å kjenne til hvorvidt datasettet inneholder endelige beslutninger/vedtak for å kunne vurdere mulighetene for datafangst. +
-Dette fordi det ved tjenesteutvikling eller implementering av nye regler ofte er forutsatt at vilkår skal dokumenteres med vedtak fattet av et annet offentlig organ.
+Bakgrunnen for diskusjonen var at det forelå et behov for å kjenne til hvorvidt datasettet inneholder endelige beslutninger/vedtak for å kunne vurdere mulighetene for datafangst. Dette fordi det ved tjenesteutvikling eller implementering av nye regler ofte er forutsatt at vilkår skal dokumenteres med vedtak fattet av et annet offentlig organ.
 
 Opplysninger som et forvaltningsorgan har benyttet som grunnlag for sine vedtak, vil være kvalitetssikret. Spørsmålet er om data som ligger i datasettet, men som ikke forvaltningsorganet kan gå god for er riktige, bør merkes på en måte slik at vi som brukere av felles datakatalog allerede ved første oppslag kan forstå at datakvaliteten ikke nødvendigvis er god nok til vårt formål?
 
@@ -22,7 +21,7 @@ Dersom datasettets opplysninger skal gjenbrukes for eksempel i forbindelse med e
 Arbeidsgruppen er likevel kommet til at behovet ikke er tilstrekkelig stort til at det er nødvendig med et eget felt i datakatalogen.
 
 .Eksempel:
-Som utreder trenger jeg å vite om informasjonen i datasettet bygger på registereiers *vedtak i medhold av lov* fordi det er forutsatt at det kun er det er+++<u>+++ endelige beslutninger+++</u>+++ vi kan bruke som dokumentasjon på at vilkårene etter utdanningsstøtteloven med forskrifter er tilstede. Dette gjelder f.eks folketrygdloven, folkeregisterloven, utlendingsloven, vergeloven mfl.
+Som utreder trenger jeg å vite om informasjonen i datasettet bygger på registereiers *vedtak i medhold av lov* fordi det er forutsatt at det kun er  [.underline]#endelige beslutninger# vi kan bruke som dokumentasjon på at vilkårene etter utdanningsstøtteloven med forskrifter er tilstede. Dette gjelder f.eks folketrygdloven, folkeregisterloven, utlendingsloven, vergeloven mfl.
 
 .Eksempel:
 Familierelasjoner, slektskap, sivilstand, og folkeregistrert adresse. Lånekassen bruker opplysningene i Folkeregisteret om familierelasjoner, sivilstand, folkeregistrert adresse mv som dokumentasjon på antall barn, forsørgeransvar, bosted osv for vurdering av rett til grunnstipend, rentefritak osv.
