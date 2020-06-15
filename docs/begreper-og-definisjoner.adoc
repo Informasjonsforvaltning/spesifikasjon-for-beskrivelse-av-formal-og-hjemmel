@@ -1,6 +1,6 @@
-
 == Begreper og definisjoner (Terms and definitions)
 
+[cols="30,40,30"]
 |===
 |*Begrep*|*Definisjon*|*Henvisning*
 
