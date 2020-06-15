@@ -1,0 +1,45 @@
+==  Eksempler på utfylling av foreslåtte felter
+
+=== Lånekassen
+
+
+|===
+|*Tittel (datasett)*|*Beskrivelse og  behandlings-*|*Behandlings-*|*Utleverings-*|*Tilgangsnivå*|*Skjermings-*
+
+|Utdanningsstøtte til elever og studenter i høyere utdanning i Norge 2016-17|Vedtak om tildeling av lån og stipend til elever og studenter i høyere utdanning i Norge i undervisningsåret 2016-17|https://lovdata.no/forskrift/2016-02-26-205/§25-1[https://lovdata.no/forskrift/2016-02-26-205/§25-1]||ikke-offentlig|https://lovdata.no/lov/1967-02-10/§13[https://lovdata.no/lov/1967-02-10/§13]
+|===
+
+=== Statens pensjonskasse (SPK)
+
+
+|===
+|*Tittel (datasett)*|*Beskrivelse og  behandlings-*|*Behandlings-*|*Utleverings-*|*Tilgangsnivå*|*Skjermings- hjemmel*
+
+|Pensjon|Treffe vedtak om tjenestepensjon til i hovedsak statsansatte og (kommunale) lærere|https://lovdata.no/dokument/NL/lov/1949-07-28-26/KAPITTEL_1#§1[https://lovdata.no/dokument/NL/lov/1949-07-28-26/KAPITTEL_1#§1]|https://lovdata.no/dokument/NL/lov/1957-07-06-26/KAPITTEL_8#§27[https://lovdata.no/dokument/NL/lov/1957-07-06-26/KAPITTEL_8#§27]|Begrenset|https://lovdata.no/lov/1967-02-10/§13[https://lovdata.no/lov/1967-02-10/§13]
+|Boliglån|Treffe vedtak om boliglån til medlemmer i Statens pensjonskasse|https://lovdata.no/dokument/SPH/sph-2017/KAPITTEL_7-5-1?q=boliglån#KAPITTEL_7-5-1[https://lovdata.no/dokument/SPH/sph-20]|https://lovdata.no/dokument/NL/lov/2016-05-27-14#KAPITTEL_7[kument/NL/lov/2016-05-27-14#KAPITTEL_7]|Begrenset|https://lovdata.no/lov/1967-02-10/§13[https://lovdata.no/lov/1967-02-10/§13]
+|Yrkesskade|Treffe vedtak om ytelse ved  yrkesskade mm. til statsansatte. Staten som arbeidsgiver|https://lovdata.no/dokument/SPH/sph-2017/KAPITTEL_7-3-24?q=yrkesskade#KAPITTEL_7-3-24[https://lovdata.no/do]|https://lovdata.no/dokument/NL/lov/2016-05-27-14#KAPITTEL_7[kument/NL/lov/2016-05-27-14#KAPITTEL_7]|Begrenset|https://lovdata.no/lov/1967-02-10/§13[https://lovdata.no/lov/1967-02-10/§13]
+|===
+
+=== Skatteetaten
+
+
+|===
+|*Tittel (datasett)*|*Beskrivelse og  behandlings-*|*Behandlings-*|*Utleverings-*|*Tilgangsnivå*|*Skjermings-*
+
+|Skattegrunnlag|Detaljert informasjon om skattepliktigs formue, inntekt, gjeld og fradrag|https://lovdata.no/NL/lov/1999-03-26-14[https://lovdata.no/NL/lov/1999-03-26-14]||ikke-offentlig|https://lovdata.no/NL/lov/2016-05-27-14/§3-1[https://lovdata.no/NL/lov/2016-05-27-14/§3-1]
+|===
+
+=== Brønnøysundregistrene
+
+
+|===
+|*Tittel (datasett)*|*Beskrivelse og  behandlings-*|*Behandlings-*|*Utleverings-*|*Tilgangsnivå*|*Skjermings-*
+
+|Enhetsregisteret inkl fødsels- og D-nummer|Vedtak om tildeling av organisasjonsnummer (entydig identifikasjon av juridisk person m.m.)|https://lovdata.no/lov/1994-06-03-15/§5[https://lovdata.no/lov/1994-06-03-15/§5] ,6 og 7|https://lovdata.no/lov/1994-06-03-15/§22[https://lovdata.no/lov/1994-06-03-15/§22]|Begrenset|https://lovdata.no/lov/1994-06-03-15/§22[https://lovdata.no/lov/1994-06-03-15/§22]
+|===
+
+|===
+|*Tittel (datasett)*|*Beskrivelse og  behandlings-*|*Behandlings-*|*Utleverings-*|*Tilgangsnivå*|*Skjermings-*
+
+|Enhetsregisteret ekskl fødsels- og D-nummer|Vedtak om tildeling av organisasjonsnummer (entydig identifikasjon av juridisk person m.m.)|https://lovdata.no/lov/1994-06-03-15/§5[https://lovdata.no/lov/1994-06-03-15/§5] ,6 og 7|https://lovdata.no/lov/1994-06-03-15/§22[https://lovdata.no/lov/1994-06-03-15/§22]|Offentlig|
+|===
