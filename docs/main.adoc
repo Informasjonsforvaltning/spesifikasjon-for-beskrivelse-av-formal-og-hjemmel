@@ -1,8 +1,6 @@
 include::locale/attributes.adoc[]
-
 = Spesifikasjon for beskrivelse av formål og hjemmel
 Versjon 1.0
-
 :description: Spesifikasjon for beskrivelse av formål og hjemmel
 :doctype: book
 :icons: font
