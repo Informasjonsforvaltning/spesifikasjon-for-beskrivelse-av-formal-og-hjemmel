@@ -4,26 +4,25 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="description" content="Mal for bruk til nye spesifikasjoner som er laga i asciidoc.">
-<title>Spesifikasjonsmal</title>
+<meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="description" content="Spesifikasjon for beskrivelse av formål og hjemmel">
+<meta name="author" content="Versjon 1.0">
+<title>Spesifikasjon for beskrivelse av formål og hjemmel</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
-/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
-/* Uncomment @import statement to use as custom stylesheet */
-/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
-audio,video{display:inline-block}
-audio:not([controls]){display:none;height:0}
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
 a{background:none}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
 h1{font-size:2em;margin:.67em 0}
-abbr[title]{border-bottom:1px dotted}
 b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
 dfn{font-style:italic}
-hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+hr{height:0}
 mark{background:#ff0;color:#000}
 code,kbd,pre,samp{font-family:monospace;font-size:1em}
 pre{white-space:pre-wrap}
@@ -35,20 +34,22 @@ sub{bottom:-.25em}
 img{border:0}
 svg:not(:root){overflow:hidden}
 figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
 legend{border:0;padding:0}
 button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
 button,input{line-height:normal}
 button,select{text-transform:none}
-button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
 button[disabled],html input[disabled]{cursor:default}
-input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type=checkbox],input[type=radio]{padding:0}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
-*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+*,::before,::after{box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -63,14 +64,12 @@ img{-ms-interpolation-mode:bicubic}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
 a img{border:0}
-p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
 p aside{font-size:.875em;line-height:1.35;font-style:italic}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
 h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
@@ -79,14 +78,14 @@ h2{font-size:1.6875em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
 h4,h5{font-size:1.125em}
 h6{font-size:1em}
-hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
 em,i{font-style:italic;line-height:inherit}
 strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
 code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
-ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
-ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
 ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
 ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
@@ -94,31 +93,29 @@ ul.disc{list-style-type:disc}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
-abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
-abbr{text-transform:none}
 blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
-blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
-blockquote cite::before{content:"\2014 \0020"}
-blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
 blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
 @media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
 h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
 .clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
 .clearfix::after,.float-group::after{clear:both}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-:not(pre)>code.nobreak{word-wrap:normal}
-:not(pre)>code.nowrap{white-space:nowrap}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
 pre>code{display:block}
@@ -126,7 +123,7 @@ pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
 em em{font-style:normal}
 strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
-kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
 .menuseq,.menuref{color:#000}
@@ -138,7 +135,7 @@ b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
 b.button::before{content:"[";padding:0 3px 0 2px}
 b.button::after{content:"]";padding:0 2px 0 3px}
 p a>code:hover{color:rgba(0,0,0,.9)}
-#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
 #header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
 #header::after,#content::after,#footnotes::after,#footer::after{clear:both}
 #content{margin-top:1.25em}
@@ -146,7 +143,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
 #header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
-#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
 #header .details br{display:none}
@@ -180,11 +177,11 @@ body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9
 #toc.toc2>ul{font-size:.95em}
 #toc.toc2 ul ul{padding-left:1.25em}
 body.toc2.toc-right{padding-left:0;padding-right:20em}}
-#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
-#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
 #content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
 @media screen and (min-width:768px){#content{margin-bottom:1.25em}
@@ -197,29 +194,33 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
 #content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
 details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
-details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
 .admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
 table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
-.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
-table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
-.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
 .exampleblock>.content>:last-child{margin-bottom:0}
-.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
 .sidebarblock>:first-child{margin-top:0}
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
-.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
 .literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
 .listingblock>.content{position:relative}
 .listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
@@ -227,7 +228,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
 .listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
 .listingblock pre.highlightjs{padding:0}
-.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
 .listingblock pre.prettyprint{border-width:0}
 .prettyprint{background:#f7f7f8}
 pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
@@ -237,9 +238,8 @@ pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
 table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
 table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
 table.linenotable td.code{padding-left:.75em}
-table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
-pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
-pre.pygments .lineno::before{content:"";margin-right:-.125em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
 .quoteblock{margin:0 1em 1.25em 1.5em;display:table}
 .quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
 .quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
@@ -248,7 +248,7 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
 .quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
 .verseblock{margin:0 1em 1.25em}
-.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
 .verseblock pre strong{font-weight:400}
 .verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
 .quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
@@ -261,23 +261,22 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
-.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%;border-collapse:separate}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
 p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
-td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
 table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
 table.frame-sides{border-width:0 1px}
-table.frame-topbot,table.frame-ends{border-width:1px 0}
-table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
 th.halign-center,td.halign-center{text-align:center}
@@ -285,7 +284,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -293,14 +292,15 @@ ol{margin-left:1.75em}
 ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
-ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
 ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
 ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
 ul.unstyled,ol.unstyled{margin-left:0}
-ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
-ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
 ul.inline>li{margin-left:1.25em}
 .unstyled dl dt{font-weight:400;font-style:normal}
 ol.arabic{list-style-type:decimal}
@@ -314,11 +314,12 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
 .colist td:not([class]):last-child{padding:.25em 0}
-.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
 .imageblock.left{margin:.25em .625em 1.25em 0}
 .imageblock.right{margin:.25em 0 1.25em .625em}
 .imageblock>.title{margin-bottom:0}
@@ -338,8 +339,6 @@ sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
 #footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
 #footnotes .footnote:last-of-type{margin-bottom:0}
 #content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
-.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
-.gist .file-data>table td.line-data{width:99%}
 div.unbreakable{page-break-inside:avoid}
 .big{font-size:larger}
 .small{font-size:smaller}
@@ -386,7 +385,7 @@ a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
 .admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
 .admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
 .conum[data-value]::after{content:attr(data-value)}
@@ -394,25 +393,27 @@ pre .conum[data-value]{position:relative;top:-.125em}
 b.conum *{color:inherit!important}
 .conum:not([data-value]):empty{display:none}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
-h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
-.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
 .print-only{display:none!important}
 @page{margin:1.25cm .75cm}
-@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
 html{font-size:80%}
 a{color:inherit!important;text-decoration:underline!important}
 a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
 a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
 abbr[title]::after{content:" (" attr(title) ")"}
 pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
 thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
 #toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
 body.book #header{text-align:center}
@@ -429,7 +430,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .print-only{display:block!important}
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
-@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
 .sect1{padding:0!important}
 .sect1+.sect1{border:0}
 #footer{background:none}
@@ -440,12 +441,91 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Spesifikasjonsmal</h1>
+<h1>Spesifikasjon for beskrivelse av formål og hjemmel</h1>
+<div class="details">
+<span id="author" class="author">Versjon 1.0</span><br>
+</div>
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
 <ul class="sectlevel1">
-<li><a href="#_forord">Forord</a></li>
-<li><a href="#_kapittel_1">Kapittel 1</a></li>
+<li><a href="#_omfang_og_avgrensning">1. Omfang og avgrensning</a>
+<ul class="sectlevel2">
+<li><a href="#_oppgave">1.1. Oppgave</a></li>
+<li><a href="#_arbeidsgruppen">1.2. Arbeidsgruppen</a></li>
+</ul>
+</li>
+<li><a href="#_normative_referanser">2. Normative referanser</a></li>
+<li><a href="#_begreper_og_definisjoner_terms_and_definitions">3. Begreper og definisjoner (Terms and definitions)</a></li>
+<li><a href="#_anbefaling_fra_arbeidsgruppen">4. Anbefaling fra arbeidsgruppen</a>
+<ul class="sectlevel2">
+<li><a href="#_sammenstilling">4.1. Sammenstilling</a></li>
+<li><a href="#_beskrivelse_av_behandlingsformål">4.2. Beskrivelse av behandlingsformål</a>
+<ul class="sectlevel3">
+<li><a href="#_anbefaling">4.2.1. Anbefaling</a></li>
+<li><a href="#_brukerbehov">4.2.2. Brukerbehov</a></li>
+<li><a href="#_feltdefinisjon">4.2.3. Feltdefinisjon</a></li>
+<li><a href="#_veileder">4.2.4. Veileder</a></li>
+</ul>
+</li>
+<li><a href="#_beskrivelse_av_behandlingsgrunnlag_for_opplysninger_herunder_personopplysninger">4.3. Beskrivelse av behandlingsgrunnlag for opplysninger, herunder personopplysninger</a>
+<ul class="sectlevel3">
+<li><a href="#_anbefaling_2">4.3.1. Anbefaling</a></li>
+<li><a href="#_brukerbehovet">4.3.2. Brukerbehovet</a></li>
+<li><a href="#_eksempler">4.3.3. Eksempler</a></li>
+<li><a href="#_feltdefinisjon_2">4.3.4. Feltdefinisjon</a></li>
+<li><a href="#_veileder_2">4.3.5. Veileder</a></li>
+</ul>
+</li>
+<li><a href="#_beskrivelse_av_tilgangsnivå">4.4. Beskrivelse av tilgangsnivå</a>
+<ul class="sectlevel3">
+<li><a href="#_anbefaling_3">4.4.1. Anbefaling</a></li>
+<li><a href="#_brukerbehovet_2">4.4.2. Brukerbehovet</a></li>
+<li><a href="#_eksempler_2">4.4.3. Eksempler</a></li>
+<li><a href="#_feltdefinisjon_3">4.4.4. Feltdefinisjon</a></li>
+<li><a href="#_vurderinger">4.4.5. Vurderinger</a></li>
+<li><a href="#_overordnet_skisse">4.4.6. Overordnet skisse</a></li>
+<li><a href="#_veileder_3">4.4.7. Veileder</a></li>
+</ul>
+</li>
+<li><a href="#beskrivelse-skjermingshjemmel">4.5. Beskrivelse av skjermingshjemmel</a>
+<ul class="sectlevel3">
+<li><a href="#_anbefaling_4">4.5.1. Anbefaling</a></li>
+<li><a href="#_brukerbehovet_3">4.5.2. Brukerbehovet</a></li>
+<li><a href="#_eksempler_3">4.5.3. Eksempler</a></li>
+<li><a href="#_feltdefinisjon_4">4.5.4. Feltdefinisjon</a></li>
+<li><a href="#_veileder_4">4.5.5. Veileder</a></li>
+</ul>
+</li>
+<li><a href="#_beskrivelse_av_utleveringshjemmel">4.6. Beskrivelse av utleveringshjemmel</a>
+<ul class="sectlevel3">
+<li><a href="#_anbefaling_5">4.6.1. Anbefaling</a></li>
+<li><a href="#_behov">4.6.2. Behov</a></li>
+<li><a href="#_eksempel_myndighetsutøvelseetterlevelse_og_kontrollformål">4.6.3. Eksempel - myndighetsutøvelse/etterlevelse og kontrollformål</a></li>
+<li><a href="#_feltdefinisjon_5">4.6.4. Feltdefinisjon</a></li>
+<li><a href="#_veileder_5">4.6.5. Veileder</a></li>
+</ul>
+</li>
+<li><a href="#_forslag_til_formalisert_henvisning_til_regelverk">4.7. Forslag til formalisert henvisning til regelverk</a>
+<ul class="sectlevel3">
+<li><a href="#_brukerbehov_2">4.7.1. Brukerbehov</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_eksempler_på_utfylling_av_foreslåtte_felter">5. Eksempler på utfylling av foreslåtte felter</a>
+<ul class="sectlevel2">
+<li><a href="#_lånekassen">5.1. Lånekassen</a></li>
+<li><a href="#_statens_pensjonskasse_spk">5.2. Statens pensjonskasse (SPK)</a></li>
+<li><a href="#_skatteetaten">5.3. Skatteetaten</a></li>
+<li><a href="#_brønnøysundregistrene">5.4. Brønnøysundregistrene</a></li>
+</ul>
+</li>
+<li><a href="#_andre_forhold_som_er_vurdert_av_arbeidsgruppen">6. Andre forhold som er vurdert av arbeidsgruppen</a>
+<ul class="sectlevel2">
+<li><a href="#_innhentingshjemmel">6.1. Innhentingshjemmel</a></li>
+<li><a href="#_opphav">6.2. Opphav</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -458,19 +538,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Publisert: 2020-03-05</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-Dette er mal-dokument for andre spesifikasjoner.
-</td>
-</tr>
-</table>
+<p><strong>Publisert</strong>: august 2017</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -479,7 +547,7 @@ Dette er mal-dokument for andre spesifikasjoner.
 <i class="fa icon-tip" title="Tips"></i>
 </td>
 <td class="content">
-Dette dokumentet kan også lastes ned <a href="document.pdf">som PDF</a>.
+Dette dokumentet kan også lastes ned <a href="files/spesifikasjon-for-beskrivelse-av-formal-og-hjemmel.pdf">som PDF</a>.
 Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangler eller lenker som ikke fungerer, ber vi om at man benytter versjonen tilgjengelig på nett for de aktuelle delene.
 </td>
 </tr>
@@ -488,24 +556,1054 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forord"><a class="anchor" href="#_forord"></a>Forord</h2>
+<h2 id="_omfang_og_avgrensning"><a class="anchor" href="#_omfang_og_avgrensning"></a>1. Omfang og avgrensning</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non augue dapibus, mollis odio vel, efficitur orci. Aenean venenatis orci a porta cursus. Suspendisse at commodo nulla, et sagittis neque. Maecenas pulvinar tellus vel tellus ultricies, sit amet tristique ex faucibus. Fusce sapien tellus, accumsan nec justo in, lobortis varius purus. Curabitur non libero lectus. Praesent accumsan quam sit amet luctus lobortis. Pellentesque augue dui, congue et felis eget, scelerisque porta enim. Proin iaculis placerat tincidunt. Cras nec gravida elit.</p>
+<p><a href="https://www.regjeringen.no/no/dokumenter/meld.-st.-27-20152016/id2483795/">Digital agenda</a> legger til grunn at offentlige virksomheter skal dele og gjenbruke informasjon om forhold som brukeren allerede har opplyst om. Brukernes behov skal settes i sentrum. Tjenestene skal oppleves som helhetlige og sammenhengende. Automatisert saksbehandling innebærer for eksempel at vedtak kan fattes og tjenester tilbys uten at innbyggeren må søke om å få tjenesten.</p>
 </div>
 <div class="paragraph">
-<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla id leo ac est condimentum tempus. Duis maximus tortor nec porttitor tincidunt. Donec eu mi sed libero pharetra semper quis in ex. Nunc mattis vitae libero eu rhoncus. Nam mattis magna ac tincidunt feugiat. Nulla ullamcorper, sem non volutpat varius, felis quam rhoncus massa, vitae pellentesque odio ligula a metus. Vestibulum commodo lacus eu odio posuere pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<p>I digital agenda kapittel 7.3 legges følgende til grunn:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>“&#8230;&#8203; der hvor en virksomhet har behov for taushetsbelagt informasjon fra en annen virksomhet, må det foreligge hjemmel for enten innhenting eller utlevering av informasjonen. Mangler hjemmel, må virksomheten vurdere om det er mulig å etablere nødvendig hjemmel.”</p>
+</li>
+<li>
+<p>“Muligheten for gjenbruk av personopplysninger er begrenset dersom den nye bruken er uforenlig med det opprinnelige formålet for innhentingen av opplysningene. Dette gjelder ikke dersom det foreligger hjemmel i lov for gjenbruk av opplysningene.”</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://www.regjeringen.no/no/dokumenter/digitaliseringsrundskrivet/id2522147/">Digitaliseringsrundskrivet for 2017</a> punkt 2.2 legger konkrete føringer til at skal det skal legges til rette for enkel gjenbruk av informasjon som omfattes av bestemmelsen i offentleglova § 7 om viderebruk av offentlig informasjon.</p>
+</div>
+<div class="paragraph">
+<p>En <a href="https://data.norge.no/">felles datakatalog</a> er nå etablert. Formålet med “felles datakatalog” er å skape en oversikt over data og begreper, for å understøtte digitalisering og regelverksutvikling, samt øvrig forenkling i offentlig sektor. Dette skal bidra til å realisere “kun én gang” (“once only”).</p>
+</div>
+<div class="paragraph">
+<p>Felles datakatalog skal bygges opp med sett med metadata som beskriver datasettene, i henhold til <a href="https://doc.difi.no/dcat-ap-no/">den norske profilen av DCAT- standarden (DCAT-AP-NO)</a>. Dette er metadata om blant annet kvalitet, begreper, hjemmel og formål, distribusjon/API, slik virksomhetene selv beskriver det. Tanken er at den felles datakatalogen automatisk skal samle/høste slike metadata fra virksomhetenes egne oversikter.</p>
+</div>
+<div class="sect2">
+<h3 id="_oppgave"><a class="anchor" href="#_oppgave"></a>1.1. Oppgave</h3>
+<div class="paragraph">
+<p>Arbeidsgruppen “formål og hjemmel” har fått i oppgave å vurdere</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>hvilke metadata som skal beskrive datasettets formål og hjemmel</p>
+</li>
+<li>
+<p>om det skal være obligatoriske, anbefalte eller valgfrie felter for å kunne fastsette et minimums kriteriesett som beskriver formål og hjemmel</p>
+</li>
+<li>
+<p>om et metadatafelt for formål og hjemmel skal kunne inneholde fritekstfelt, lenker til der det finnes eller standardiserte kategorier</p>
+</li>
+<li>
+<p>om behovet for egne beskrivelser/metadatafelter er sannsynliggjort med brukerhistorier</p>
+</li>
+<li>
+<p>om brukerhistoriene dekker de tre primære bruksområdene av data i offentlig sektor til tjeneste- og regelutvikling, myndighetsutøvelse/etterlevelse, og som informasjonsbase for borgeren.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_arbeidsgruppen"><a class="anchor" href="#_arbeidsgruppen"></a>1.2. Arbeidsgruppen</h3>
+<div class="paragraph">
+<p>Arbeidsgruppen er ledet av Difi ved Pia Virmalainen Jøsendal. Det er etablert en kjernegruppe bestående av Liv Bergliot Simonsen (Statens lånekasse for utdanning), Thomas Rigvår (Skattedirektoratet), Magne U. Sand Bakken (Statens pensjonskasse) og Jon Barstad (Arkivverket).</p>
+</div>
+<div class="paragraph">
+<p>Følgende har deltatt i denne arbeidsgruppen:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Etat</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Navn</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arbeids- og velferdsdirektoratet (NAV)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tone Gangnæs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arkivverket</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jon Barstad (kjernegruppe)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brønnøysundregistrene</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">David Norheim, Elisabeth Lilleholt, Sissel Hartvigsen, Sturla Winther, Svein Erik Grønmo, Terje Bertelsen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Difi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jim J. Yang, Jon Berge Holden, Linn Aungrind, Pia Virmalainen Jøsendal (leder), Øystein Åsnes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kartverket</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magni Busterud</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Politiet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arne Dybdahl</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skattedirektoratet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ragnhild Haga (kjernegruppe), Thomas Rigvår (kjernegruppe)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Statens lånekasse for utdanning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gustav Aagesen, Liv Bergliot Simonsen (kjernegruppe)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Statens pensjonskasse (SPK)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magne U. Sand Bakken (kjernegruppe)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Statens vegvesen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cecilie H. Bratt, Hilde Austlid, Morten Løberg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Statistisk sentralbyrå (SSB)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Thorleiv Valen</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_kapittel_1"><a class="anchor" href="#_kapittel_1"></a>Kapittel 1</h2>
+<h2 id="_normative_referanser"><a class="anchor" href="#_normative_referanser"></a>2. Normative referanser</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Etiam tempus neque porttitor enim congue, vel dictum odio aliquet. Sed massa lectus, pretium nec erat in, facilisis tincidunt lorem. Phasellus ut elit ut nibh aliquet sollicitudin a in elit. Duis dolor ligula, gravida ac eros sit amet, congue ultrices lacus. Curabitur ut tincidunt ipsum, ut aliquam ipsum. Phasellus vel elit eros. Duis pellentesque risus non sollicitudin bibendum. Donec ultrices mi lectus, id feugiat leo hendrerit a. Pellentesque in urna a elit cursus consectetur in et lacus. In hac habitasse platea dictumst. Cras scelerisque, nisl in dapibus malesuada, justo risus ornare sapien, a sagittis massa enim ut nisi. Ut varius augue justo, vel efficitur ipsum suscipit sed. Duis sollicitudin lobortis ligula sit amet sagittis.</p>
+<p><a href="https://doc.difi.no/dcat-ap-no/">Standard for beskrivelse av datasett og datakataloger</a> (DCAT-AP-NO), v.1.1, 11.10.2016.</p>
 </div>
 <div class="paragraph">
-<p>Vivamus elit massa, tempus vel bibendum non, fringilla sed ex. Mauris euismod neque et quam convallis gravida. Donec molestie nulla eget arcu molestie, et interdum neque auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec massa vel mauris pellentesque sollicitudin quis ut ante. Nulla malesuada pharetra ex, sit amet tincidunt mi dapibus ut. Aliquam erat volutpat. Sed sed quam sapien. Sed eu iaculis lacus, maximus interdum dolor.</p>
+<p><a href="https://www.datatilsynet.no/Regelverk/EUs-personvernforordning/hva-betyr/alle-ma-kunne-oppfylle-borgernes-nye-rettigheter/">EUs-personvernforordning</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_begreper_og_definisjoner_terms_and_definitions"><a class="anchor" href="#_begreper_og_definisjoner_terms_and_definitions"></a>3. Begreper og definisjoner (Terms and definitions)</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 40%;">
+<col style="width: 30%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Begrep</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Definisjon</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Henvisning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behandlingsformål</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Med behandlingsformål forstås en beskrivelse av hvilken hensikt som skal oppnås med behandling av personopplysninger.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<a href="https://www.datatilsynet.no/Regelverk/EUs-personvernforordning/hva-betyr/alle-ma-kunne-oppfylle-borgernes-nye-rettigheter/">https://www.datatilsynet.no/Regelverk/EUs-personvernforordning/hva-betyr/alle-ma-kunne-oppfylle-borgernes-nye-rettigheter/</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lovhjemmel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En henvisning til det rettslige grunnlaget for behandlingen av opplysningene, herunder personopplysninger.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samtykke</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En frivillig, uttrykkelig og informert erklæring fra den registrerte om at han eller hun godtar behandling av opplysninger om seg selv.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/2000-04-14-31/§2">Popplyl § 2 nr 7</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nødvendighetsgrunn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behandling av personopplysninger er nødvendig for de grunner som er definert i personopplysningsloven § 8 bokstav a-f eller § 9 bokstav a-h.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/2000-04-14-31/§8">Popplyl § 8 og 9</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Personopplysning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opplysninger og vurderinger som kan knyttes til en enkeltperson</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/2000-04-14-31/§2">Popplyl § 2</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behandling av personopplysninger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enhver bruk av personopplysninger, som f.eks. innsamling, registrering, sammenstilling, lagring og utlevering eller en kombinasjon av slike bruksmåter.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/2000-04-14-31/§2">Popplyl § 2</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behandlingsgrunnlag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rettslig grunnlag for behandling av opplysninger,  herunder personopplysninger, som kan være lov eller samtykke eller at behandlingen er nødvendig (nødvendighets grunn).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ingen definisjon i personopplysningsloven eller GDPR, men følger av</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Begrensning - betaling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angir om det er kostnader knyttet til bruk av datasettet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utleveringshjemmel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Henvisning til regelverk som begrunner en offentlig virksomhet sin rett eller plikt til å utlevere opplysninger til andre private personer eller juridiske personer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anbefaling_fra_arbeidsgruppen"><a class="anchor" href="#_anbefaling_fra_arbeidsgruppen"></a>4. Anbefaling fra arbeidsgruppen</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sammenstilling"><a class="anchor" href="#_sammenstilling"></a>4.1. Sammenstilling</h3>
+<div class="paragraph">
+<p>I arbeidet med å lage et kriteriesett (minimum) for å beskrive formål og hjemmel, må vi vite hva som er godt nok til at det er nyttig, men ikke så krevende at det avskrekker fra å dokumentere og forvalte.</p>
+</div>
+<div class="paragraph">
+<p>Det kan være vanskelig å finne balansen mellom for lite og for mye dokumentasjon. Vi tar utgangspunkt i at beskrivelsen i datakatalogen skal være tilstrekkelig til at brukeren kan bestemme seg for om det er verdt å undersøke muligheten nærmere for gjenbruk, for eksempel ved å henvende seg til kontaktpersonen til datasettets eier som er et eget metadatafelt.</p>
+</div>
+<div class="paragraph">
+<p>Det er trolig også hensiktsmessig at det for noen datasett legges til flere opplysninger enn for andre. Dette gjelder særlig grunndata, hvor beskrivelsene må være mer omfattende. For andre opplysninger vil neppe datakatalogen i seg selv gi tilstrekkelig dokumentasjon til at andre kan konkludere på om opplysningene kan legges til grunn i egen saksbehandling.</p>
+</div>
+<div class="paragraph">
+<p>Tabellen under inneholder en sammenstilling av anbefalingene fra arbeidsgruppen. Hver av anbefalingene beskrives nærmere i etterfølgende avsnitt.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Beskrivelse av &#8230;&#8203;</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Løsningsforslag</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behandlingsformål</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: <a href="https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse">«Beskrivelse» i DCAT-AP-NO 1.1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behandlingsgrunnlag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: to nye felt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgangsnivå</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: <a href="https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva">«Tilgangsnivå» i DCAT-AP-NO 1.1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skjermingshjemmel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: <a href="https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel">«Skjermingshjemmel» i DCAT-AP-NO 1.1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utleveringshjemmel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: nytt felt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_beskrivelse_av_behandlingsformål"><a class="anchor" href="#_beskrivelse_av_behandlingsformål"></a>4.2. Beskrivelse av behandlingsformål</h3>
+<div class="sect3">
+<h4 id="_anbefaling"><a class="anchor" href="#_anbefaling"></a>4.2.1. Anbefaling</h4>
+<div class="paragraph">
+<p>Arbeidsgruppen mener at formålet med behandlingen av opplysningene i datasettet må komme tydelig frem, fordi dette er vesentlig informasjon for ny bruker av opplysningene. Arbeidsgruppen har i særlig grad vektlagt behandlingen av personopplysninger fordi gjenbruk av borgerens opplysninger er sentralt for anvendelsen av felles datakatalog.  Vi har derfor valgt å kalle det for behandlingsformål. Det er imidlertid ikke en begrensning til kun personopplysninger, da en god beskrivelse av hva opplysningene i datasettet er brukt til også vil være viktig informasjon for å vurdere gjenbruksverdien.</p>
+</div>
+<div class="paragraph">
+<p>Det foreslås at det ikke innføres et eget felt for formål, men at man bruker feltet <a href="https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse">beskrivelse</a> i DCAT-AP-NO v.1.1. Feltet må være fritekst og obligatorisk (uendret ift. DCAT-AP-NO v.1.1). Dersom dette feltet fylles ut i henhold til veiledningen om bruk av DCAT fra Difi vil det gi en god forklaring på hva som var hensikten med behandlingen av opplysningene i datasettet og hva det inneholder.</p>
+</div>
+<div class="paragraph">
+<p>Vi mener at beskrivelse av datasettet sammen med andre felter i datakatalogen til sammen gir tilstrekkelig informasjon til brukeren av felles datakatalog om hvilket formål avgiverorganet har brukt opplysningene til.</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppen anbefaler at veilederen oppdateres med tekst som forklarer hvordan behandlingsformål skal beskrives.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_brukerbehov"><a class="anchor" href="#_brukerbehov"></a>4.2.2. Brukerbehov</h4>
+<div class="paragraph">
+<p>Arbeidsgruppen mener det er behov for informasjon om hva som var det opprinnelige formålet med behandlingen av opplysningene i datasettet ved utredning av muligheten for gjenbruk til ny behandling. Dette vil være både i regel/tjenesteutviklingsfasen og til etterfølgende kontrollformål. Informasjon om formålet er også relevant for å ta stilling til behovet for nye hjemler for innhenting av opplysninger. Dette gjelder både for personopplysninger og andre opplysninger.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feltdefinisjon"><a class="anchor" href="#_feltdefinisjon"></a>4.2.3. Feltdefinisjon</h4>
+<div class="paragraph">
+<p>I DCAT-AP-NO 1.1 er “beskrivelse” omtalt slik:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Datasett: beskrivelse</div>
+<div class="paragraph">
+<p><strong>URI</strong>: dct:description<br>
+<strong>Range</strong>: rdfs:Literal<br>
+<strong>Beskrivelse</strong>: Inneholder fritekstbeskrivelse av datasettet. Kan gjentas for parallelle  språkversjoner<br>
+<strong>Kardinalitet</strong>: 1..n<br>
+<strong>Status</strong>: Obligatorisk<br></p>
+</div>
+<div class="paragraph">
+<p>kilde: <a href="https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse" class="bare">https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse</a></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppen mener at vokabularet dekker behovet og at det ikke er nødvendig med en utvidelse. Dette forutsetter at det fremkommer tydelig i veilederen at formål må omfattes når datasettet skal beskrives.</p>
+</div>
+<div class="paragraph">
+<p>Det har vært diskutert om det bør være to ulike utfyllingsfelt for beskrivelse og formål, men at det vises i samme felt i felles datakatalog. Arbeidsgruppen mener dette ikke er nødvendig fordi det i de fleste tilfeller vil være naturlig å forklare hva datasettet er brukt til når det skal beskrives. Vi antar derfor at det vil bli overlappende tekst med samme meningsinnhold, noe som kan virke forvirrende. Vi anbefaler derfor at det skal være ett utfyllingsfelt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_veileder"><a class="anchor" href="#_veileder"></a>4.2.4. Veileder</h4>
+<div class="paragraph">
+<p>I Difi sin veileder for beskrivelse av datasett DCAT-AP-NO versjon 1.1 er feltet “beskrivelse” omtalt slik:</p>
+</div>
+<div class="paragraph">
+<div class="title">Innspill til veilederen:</div>
+<p>Veilederen er under revidering og arbeidsgruppen anbefaler at tekst gjennomgås for å sikre at det går tydelig frem at behandlingsformål er en del av beskrivelsen. Slik teksten står nå er det kulepunktet “Hensikten med datasettet…” som er rettet mot formålsbeskrivelse.</p>
+</div>
+<div class="paragraph">
+<p>Som omtalt under feltdefinisjon ovenfor har det vært en diskusjon om det bør være to utfyllingsfelt. Dersom det blir to felt som skal fylles ut, en for beskrivelse og en for formål, men med felles visning er det risiko for at det blir likelydende tekst i disse to feltene. Arbeidsgruppen anbefaler ikke en slik løsning. Dersom denne løsningen likevel blir valgt må kulepunktet <em>hensikten med datasettet</em> omtales i et eget punkt i veilederen knyttet til utfyllingsfelt for behandlingsformål.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beskrivelse_av_behandlingsgrunnlag_for_opplysninger_herunder_personopplysninger"><a class="anchor" href="#_beskrivelse_av_behandlingsgrunnlag_for_opplysninger_herunder_personopplysninger"></a>4.3. Beskrivelse av behandlingsgrunnlag for opplysninger, herunder personopplysninger</h3>
+<div class="sect3">
+<h4 id="_anbefaling_2"><a class="anchor" href="#_anbefaling_2"></a>4.3.1. Anbefaling</h4>
+<div class="paragraph">
+<div class="title">Ved behandling av personopplysninger:</div>
+<p>Etter personopplysningsloven § 8 og 9 skal det foreligge et grunnlag for behandling av personopplysninger. Arbeidsgruppen anbefaler at det tas i bruk et eget felt for behandlingsgrunnlag med tre valgmuligheter tilsvarende inndelingen i personopplysningsloven. Det er lovhjemmel, samtykke eller nødvendighetsvurdering. Feltet er anbefalt og må fylles ut hvis datasettet inneholder personopplysninger For hver av de tre bør det også knyttes en henvisning til lov. Det bør være mulig å henvise til flere behandlingsgrunnlag fordi et datasett kan inneholde opplysninger som har ulike hjemler for behandlingsgrunnlag. Dette kan for eksempel være lovgrunnlag og samtykke eller nødvendighetsvurdering.</p>
+</div>
+<div class="paragraph">
+<p>Det anbefales ikke å ha et eget felt for verbal beskrivelse av behandlingsgrunnlaget. Dersom dette er et behov vil det være mulig å omtale dette under feltet “beskrivelse” eller andre steder der det er fritekst. Begrunnelsen er at fritekstfelter ikke er hensiktsmessig fordi det ikke blir maskinlesbart.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_brukerbehovet"><a class="anchor" href="#_brukerbehovet"></a>4.3.2. Brukerbehovet</h4>
+<div class="paragraph">
+<p>Dersom et datasett inneholder personopplysninger skal det være et grunnlag for behandlingen. Å få kunnskap om type behandlingsgrunnlag har stor informasjonsverdi for å vurdere om datasettet er relevant å undersøke nærmere. I tillegg gir det direkte eller indirekte informasjon om formålet med behandlingen, hvilken type utøvelse av offentlig myndighet det er og kvaliteten på dataene. At det henvises til lovgrunnlaget for samtykke eller nødvendighetsgrunn har også stor informasjonsverdi for brukeren av felles datakatalog bl.a for vurderingen av eget behov for hjemler for bruk av samme data.</p>
+</div>
+<div class="paragraph">
+<p>Samtidig vil dette på lengre sikt gi en oversikt over det offentliges behandlingsgrunnlag som videre kan ha verdi ved endring eller utarbeidelse av nytt lovverk.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_eksempler"><a class="anchor" href="#_eksempler"></a>4.3.3. Eksempler</h4>
+<div class="paragraph">
+<div class="title">Historie 1: Automatisert datafangst - Regelutvikling/tjenesteutvikling</div>
+<p>Regjeringen la frem et forslag i RNB 2017 å utvide utdanningsstøtteordningen med en ny ettergivelsestype der studenter som tar lærerutdanning for trinn 1-7 og jobber som lærer i Nord-Norge etterpå, vil få ettergitt rundt 160 000 kroner. Denne ordningen trer ikke i kraft før om fem år.</p>
+</div>
+<div class="paragraph">
+<p>Det er også fremmet et strakstiltak for Finnmark og sju kommuner i Nord-Troms der kvalifiserte grunnskolelærere får slette 20 000 kroner i studielån hvert år de arbeider i en skole i regionen. Ordningen skal vare frem til 2020.</p>
+</div>
+<div class="paragraph">
+<p>Som tjenesteutvikler i Lånekassen trenger vi å vite om noen andre offentlige etater har register over ansatte grunnskolelærere i visse kommuner i Nord-Norge for å vurdere om vi kan bruke opplysningene i registeret til automatisk datafangst for å dokumentere at vilkårene for ettergivelse av utdanningslån er tilstede.</p>
+</div>
+<div class="paragraph">
+<p>Ved søk i felles datakatalog må vi få en del opplysninger for å bestemme om vi bør sjekke det ut nærmere. Vi må få en god beskrivelse av hva datasettet inneholder, hvorfor dataene blir innsamlet og om det rettslige grunnlaget etaten har for å etablere registeret, om de som leverte data til registeret er primærkilden, om de har  rapporteringsplikt, for hvilken periode dataene gjelder for, hvor hyppig data blir levert, om dataene oppdateres, oppdateringsfrekvens, blir dataene rettet hvis det har vært rapportert inn feil, er det merket om dataene er endret, kan dataene utleveres uten at vi har innhentingshjemmel.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Behov</strong></th>
+<th class="tableblock halign-left valign-top"><strong>JA/NEI</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formål/beskrivelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behandlingsgrunnlag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utleveringshjemmel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgangsrettighet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skjermingshjemmel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offentlig myndighetsutøvelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<div class="title">Datasett fra SPK</div>
+<p>Alle arbeidsgivere med pensjonsordning i Statens pensjonskasse (SPK) må hver måned rapportere inn opplysninger om alle sine ansatte til SPK. Opplysninger som må gis er bl.a. lønn, stillingsandel, permisjon og tittel. I tillegg til statlige etater og enkelte private virksomheter har også kommunale lærere pensjonsordning i SPK.</p>
+</div>
+<div class="paragraph">
+<p>Det er bl.a. foreslått nye regler om ettergivelse av studielån for nærmere angitte lærere i Nord-Norge. Spørsmålet er om aktuelle lærere selv må søke om ettergivelse av studielån og dokumentere stillingsforholdet. Alternativt at lærerne får beskjed fra Lånekassen om at de kan søke, men at Lånekassen innhenter nødvendig dokumentasjon. Atter alternativt at Lånekassen ettergir studielånet automatisk. I de to siste tilfellene må arbeidsgiverne rapportere inn stillingsforholdet til Lånekassen. Spørsmålet er om Lånekassen kan gjenbruke de opplysningene arbeidsgiverne alt gir til SPK.</p>
+</div>
+<div class="paragraph">
+<p>Ved at datasettet til SPK inneholder en beskrivelse av behandlingsgrunnlaget med henvisning til lov vil Lånekassens utvikler ved oppslag i loven forstå at datasettet kan være relevant fordi også andre enn offentlige tjenestemenn kan være medlemmer av Statens pensjonskasse.  Videre vil vi kunne se at det er pliktig medlemskap, at det er rapporteringsplikt mv.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Tittel (datasett)</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Beskrivelse og  behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Utleverings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Tilgangsnivå</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Skjermings- hjemmel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pensjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Treffe vedtak om tjenestepensjon til i hovedsak statsansatte og (kommunale) lærere</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/dokument/NL/lov/1949-07-28-26/KAPITTEL_1#§1">https://lovdata.no/dokument/NL/lov/1949-07-28-26/KAPITTEL_1#§1</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/dokument/NL/lov/1957-07-06-26/KAPITTEL_8#§27">https://lovdata.no/dokument/NL/lov/1957-07-06-26/KAPITTEL_8#§27</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Begrenset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1967-02-10/§13">https://lovdata.no/lov/1967-02-10/§13</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<div class="title">Andre datasett</div>
+<p>Ved søk i felles datakatalog vil vi få treff også på andre datasett som f.eks A-ordningen. Ved god informasjon om formålet med bruk av opplysningene i datasettet, henvisning til behandlingsgrunnlaget i A-opplysningsloven vil vi raskt kunne ta stilling til om vi skal undersøke om dette datasettet er brukbart til vårt behov.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feltdefinisjon_2"><a class="anchor" href="#_feltdefinisjon_2"></a>4.3.4. Feltdefinisjon</h4>
+<div class="paragraph">
+<p>Det vil være behov for et tillegg i den norske versjonen av DCAT med ett felt med tre alternative verdier som også kan kombineres (flervalg) som fylles ut med henvisning til det rettslige grunnlaget for behandlingen av personopplysninger.</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppen foreslår at feltet _behandlingsgrunnlag _omtales slik i vokabularet:</p>
+</div>
+<div class="paragraph">
+<p>Grunnlaget for behandling av personopplysninger.</p>
+</div>
+<div class="paragraph">
+<p>Begrepet er ikke definert i personopplysningsloven eller i GDPR. I omtalen til Datatilsynet om begrepet behandlingsgrunnlag og GDPR brukes beskrivelsen ovenfor.   (<a href="https://www.datatilsynet.no/Regelverk/EUs-personvernforordning/hva-betyr/alle-ma-kunne-oppfylle-borgernes-nye-rettigheter/">https://www.datatilsynet.no/Regelverk/EUs-personvernforordning/hva-betyr/alle-ma-kunne-oppfylle-borgernes-nye-rettigheter/</a>)</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppen foreslår i utgangspunktet at feltet <em>behandlingsgrunnlag</em> skal ha tre verdier som vi foreslår omtales i den norske DCAT. Dersom et datasett har flere behandlingsgrunnlag vil det være behov for mulighet til å fylle ut flere verdier samtidig på et datasett.</p>
+</div>
+<div class="paragraph">
+<p>Forslaget må harmoniseres med definisjoner i ny personopplysningslov og med den norske oversettelsen av personvernforordningen når disse foreligger.</p>
+</div>
+<div class="paragraph">
+<div class="title">Forslag til verdibeskrivelse:</div>
+<p><strong>Lovgrunnlag:</strong> En henvisning til det rettslige grunnlaget for behandlingen av personopplysninger</p>
+</div>
+<div class="paragraph">
+<p><strong>Samtykke:</strong> En frivillig, uttrykkelig og informert erklæring fra den registrerte om at han eller hun godtar behandling av opplysninger om seg selv.</p>
+</div>
+<div class="paragraph">
+<p><strong>Nødvendighetsgrunn:</strong> Behandling av personopplysninger er nødvendig for de grunner som er definert i personopplysningsloven § 8 bokstav a-f eller § 9 bokstav a-h.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_veileder_2"><a class="anchor" href="#_veileder_2"></a>4.3.5. Veileder</h4>
+<div class="paragraph">
+<p>Feltet behandlingsgrunnlag med de tre verdiene; lovgrunnlag, samtykke og nødvendighetsgrunn må forklares nærmere i veilederen slik at de som skal legge inn opplysninger om datasettet får god informasjon om hvordan feltet skal fylles ut.</p>
+</div>
+<div class="paragraph">
+<p>Teksten i veilederen må harmoniseres med ny personopplysningslov og den norske oversettelsen av personvernforordningen når disse vedtas med ikrafttredelse i mai 2018 og det bør være en klar henvisning til dette regelverket i veilederen.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beskrivelse_av_tilgangsnivå"><a class="anchor" href="#_beskrivelse_av_tilgangsnivå"></a>4.4. Beskrivelse av tilgangsnivå</h3>
+<div class="sect3">
+<h4 id="_anbefaling_3"><a class="anchor" href="#_anbefaling_3"></a>4.4.1. Anbefaling</h4>
+<div class="paragraph">
+<p>Arbeidsgruppen mener det er viktig å ha et felt som gir informasjon om hvorvidt datasettet inneholder opplysninger som er ikke-offentlig (skjermet) og ikke kan utleveres uten at mottaker har et hjemmelsgrunnlag for å motta opplysningene. Om dataene er begrenset eller ikke-offentlig gir viktig informasjon for den som skal vurdere om datasettet er egnet til sitt bruk.</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppen anbefaler å benytte feltet <a href="https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva">datasett: tilgangsnivå</a> i DCAT-AP-NO v.1.1, som angir hvilket tilgangsnivå datasettet har via en nedtrekksmeny med tre valg, jf. EU-definisjonen.</p>
+</div>
+<div class="paragraph">
+<p>Se <a href="#beskrivelse-skjermingshjemmel">Beskrivelse av skjermingshjemmel</a> for arbeidsgruppens forslag til å angi informasjon om betaling.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_brukerbehovet_2"><a class="anchor" href="#_brukerbehovet_2"></a>4.4.2. Brukerbehovet</h4>
+<div class="paragraph">
+<p>Det er behov for å angi i hvilken grad datasettet kan bli gjort tilgjengelig for allmennheten, uten hensyn til om det er publisert eller ikke. Det er nødvendig å angi om datasettet er helt eller delvis skjermet for innsyn.</p>
+</div>
+<div class="paragraph">
+<p>Det er også et behov for informasjon om bruk av datasettet medfører kostnader eller andre forhold som krever finansiering.</p>
+</div>
+<div class="paragraph">
+<p>Det er behov for tydelige avgrensninger slik at det blir enkelt å fylle ut feltene. Dette er en informasjonsutfordring som anbefales løst i veilederen.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_eksempler_2"><a class="anchor" href="#_eksempler_2"></a>4.4.3. Eksempler</h4>
+<div class="paragraph">
+<p>NAV ønsker å forenkle, effektivisere og heve kvaliteten på tjenesten arbeidsrettet oppfølging. Brukere som trenger bistand for å komme seg i arbeid skal gi en beskrivelse av egen situasjon i en digitalisert løsning. For å forenkle informasjonsinnhentingen, både for bruker og NAV, kan et alternativ være at NAV presenterer overfor bruker relevante opplysninger som allerede er registrert hos NAV og innhenter annen relevant informasjon fra andre offentlige virksomheter. Det kan for eksempel være opplysninger om hvorvidt utenlandsk utdanning er godkjent i Norge fra Nokut, om gjennomført introduksjonsprogram fra NIR, IMDI og om godkjent oppholdstillatelse i Norge fra UDI. For å vurdere om disse opplysningene lovlig kan gjenbrukes til formålet arbeidsrettet oppfølging, så trenger NAV å vite om disse opplysningenes behandlingsgrunnlag, formål og om de er underlagt lovpålagt taushetsplikt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feltdefinisjon_3"><a class="anchor" href="#_feltdefinisjon_3"></a>4.4.4. Feltdefinisjon</h4>
+<div class="paragraph">
+<p>Arbeidsgruppen mener at DCAT-AP-NO 1.1 “tilgangsnivå” vil dekke brukerbehovet. Dette feltet er beskrevet slik:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva">https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva</a></p>
+</div>
+<div class="paragraph">
+<p>EU Publication Office har definert de tre verdiene slik.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">navn</th>
+<th class="tableblock halign-left valign-top">beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">non-public</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not publicly accessible for privacy, security or other reasons. Usage note: This category may include resources that contain sensitive or personal information.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">public</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publicly accessible by everyone. Usage note: Permissible obstacles include registration and request for API keys, as long as anyone can request such registration and/or API keys.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">restricted</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only available under certain conditions. Usage note: This category may include resources that require payment, resources shared under non-disclosure agreements, resources for which the publisher or owner has not yet decided if they can be publicly released.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_vurderinger"><a class="anchor" href="#_vurderinger"></a>4.4.5. Vurderinger</h4>
+<div class="paragraph">
+<p>Arbeidsgruppa har avgrenset mot retten til partsinnsyn etter forvaltningsloven eller særlover fordi retten til å se opplysningene i egen sak er en annen vurdering enn spørsmålet om andre skal ha rett til å se dataene. Det er ikke det primære bruksområdet for felles datakatalog å dekke behovet for innsyn i opplysningene i egen sak. Felles datakatalog skal gi brukeren en mulighet til å se hvilke opplysninger som blir brukt ved behandlingen, men krav om innsyn i egen sak må håndteres som en del av saksbehandlingen. Et datasett som f.eks er begrenset eller ikke-offentlig vil være tilgjengelige for parten(e) i saken med de begrensningene som følger av lov.</p>
+</div>
+<div class="paragraph">
+<p>I omtalen nedenfor er fokuset på informasjon om hvilken type tilgang som kan gis til datasettet og ikke spørsmålet om rett til viderebruk. Retten til viderebruk av personopplysninger krever er rettslig grunnlag jf <a href="https://lovdata.no/lov/2000-04-14-31/§8">popplyl § 8</a> og <a href="https://lovdata.no/lov/2000-04-14-31/§9">https://lovdata.no/lov/2000-04-14-31/§9[9</a>]. Den enkelte virksomhet må selv sikre at de har et rettslig grunnlag jf personopplysningsloven før datautveksling gjennomføres.</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppa har drøftet om de tre verdiene, <em>offentlig</em>, <em>begrenset</em> eller <em>ikke-offentlig</em>, dekker brukerbehovene. Brukerbehovet var å få informasjon om skjerming og om det er andre betingelser knyttet til bruken av datasettet. Behovet var også om de tre verdiene er tydelig avgrenset slik at det blir enkelt å forstå hvor datasettet hører hjemme.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_overordnet_skisse"><a class="anchor" href="#_overordnet_skisse"></a>4.4.6. Overordnet skisse</h4>
+<div class="paragraph">
+<p>Nedenfor er det gjort et forsøk på å omtale hva som faller innenfor de ulike verdiene i feltet tilgangsnivå:</p>
+</div>
+<div class="paragraph">
+<div class="title">Offentlig</div>
+<p>I denne kategorien faller datasett som kan gjøres tilgjengelig for alle og enhver. Dette er datasett som inneholder opplysninger som faller inn under offentleglovas hovedregel og ingen unntakshjemler kommer til anvendelse (<a href="https://lovdata.no/lov/2006-05-19-16/§3">offl. § 3</a>).</p>
+</div>
+<div class="paragraph">
+<p>Dette vil også omfatte datasett med opplysninger fra virksomheter som faller utenfor <a href="https://lovdata.no/lov/2006-05-19-16/§2">offenleglovas virkeområde</a> under forutsetning at det ikke følger av annen lov eller avtale at opplysningene skal underlegges begrensninger for gjenbruk, taushetsrett eller plikt.</p>
+</div>
+<div class="paragraph">
+<p>Kategorien omfatter datasett der det stilles vilkår som er like for alle og ikke oppleves som særlig tyngende. Dette vil f.eks være krav om brukerregistrering/API-nøkler som er gratis.</p>
+</div>
+<div class="paragraph">
+<p>Det kan også være krav etter åndsverksloven for viderebruk f.eks krav om kildehenvisning <a href="https://lovdata.no/lov/1961-05-12-2/§3">åvl § 3</a> som ikke er å anse som særlig tyngende og som er likt for alle.</p>
+</div>
+<div class="paragraph">
+<p>Alle åpne data faller inn under denne kategorien.</p>
+</div>
+<div class="paragraph">
+<p>Så lenge alle kan få tilgang, vil datasettet være “offentlige” ihht. dette feltet. Forutsetningen er at ev. begrensninger er like for alle for eksempel brukerregistrering/api-nøkler. Dersom begrensningen oppleves som særlig tyngende vil dataene være i kategorien <em>begrenset</em>. Særlig tyngende vil f.eks være betaling, godkjenning, avtalelisenser mv.</p>
+</div>
+<div class="paragraph">
+<p>Innholdsmessig er forslaget i samsvar med definisjonen i EU sitt rammeverk.</p>
+</div>
+<div class="paragraph">
+<p>“EU Publication Office: Publicly accessible by everyone. Usage note: Permissible obstacles include registration and request for API keys, as long as anyone can request such registration and/or API keys.”</p>
+</div>
+<div class="paragraph">
+<div class="title">Begrenset</div>
+<p>Datasettet kan gjøres tilgjengelig for alle og enhver på visse vilkår.</p>
+</div>
+<div class="paragraph">
+<p>Kategorien kan omfatte datasett som</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>opplysningene er offentlige jf offl § 3, men det er knyttet andre begrensninger til bruken som vurderes å være særlig tyngende f.eks</p>
+<div class="ulist">
+<ul>
+<li>
+<p>kun er tilgjengelig mot betaling for innsyn, <a href="https://lovdata.no/forskrift/2008-10-17-1119/§4">offentlegforskrifta § 4</a></p>
+</li>
+<li>
+<p>er omfattet av opphavsrett og krav til vederlag før bruk <a href="https://lovdata.no/lov/1961-05-12-2/§35">åvl § 35</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>er omfattet av lovbestemt taushetsrett og krever søknad og/eller konkret vurdering.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lovhjemmel for utlevering av opplysningene etter en konkret vurdering. Dette er for eksempel folkeregisterloven der SKD kan vurdere utlevering av opplysningene på visse vilkår. Dersom det foreligger en slik utleveringshjemmel skal det henvises til bestemmelsen med link til lovdata.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>er omfattet av sivilrettslige avtaler som har klausuler som begrenser offentliggjøring/gjenbruk ved å stille krav om godkjenning/samtykke, betaling osv.</p>
+</li>
+<li>
+<p>ikke er vurdert med tanke på tilgangsnivå ennå <a href="https://lovdata.no/lov/2006-05-19-16/§5">offl § 5</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Innholdsmessig er forslaget i samsvar med definisjonen i EU sitt rammeverk.</p>
+</div>
+<div class="paragraph">
+<p>“EU Publication Office: Only available under certain conditions. Usage note: This category may include resources that require payment, resources shared under non-disclosure agreements, resources for which the publisher or owner has not yet decided if they can be publicly released.”</p>
+</div>
+<div class="paragraph">
+<div class="title">Ikke-offentlig (non-public)</div>
+<p>Datasettet kan ikke gjøres tilgjengelig for alle og enhver fordi det er unntatt offentlighet på grunn av lovbestemt taushetsplikt jfhttps://lovdata.no/lov/2006-05-19-16/§13[ offl § 13]. <br>
+Taushetsplikten vil typisk dekke personlige forhold (herunder hemmelig adresse og de fleste sensitive personopplysninger) og forretningshemmeligheter, jf. fvl § 13. Videre kan opplysningene i datasettet ikke gjøres tilgjengelig fordi det omfattes av reglene i <a href="https://lovdata.no/lov/2006-05-19-16/§5">offl kapittel 3</a> for unntak fra innsynsretten.</p>
+</div>
+<div class="paragraph">
+<p>Innholdsmessig er forslaget i samsvar med definisjonen i EU sitt rammeverk.</p>
+</div>
+<div class="paragraph">
+<p>“EU Publication Office: Not publicly accessible for privacy, security or other reasons. Usage note: This category may include resources that contain sensitive or personal information.”</p>
+</div>
+<div class="paragraph">
+<p>Vi gjør oppmerksom på at datasett som omfattes av kategorien ikke-offentlig på grunn av taushetsplikt kan utveksles dersom det faller inn under et av unntakene fra taushetsplikten i <a href="https://lovdata.no/lov/1967-02-10/§13a">forvaltningsloven §§ 13 a-f</a>. Denne konkrete vurderingen vil gjelde for alle datasett og er av en litt annen type enn de datasettene som omfattes av lovbestemt taushetsrett som er omtalt i kategorien begrenset. Vi mener det derfor vil være mest hensiktsmessig å legge datasett som i utgangspunktet omfattes av taushetsplikten under kategorien ikke-offentlig, men at det i bestemte situasjoner kan gjøres unntak jf fvl §§ 13 a-f.</p>
+</div>
+<div class="paragraph">
+<div class="title">Hva hvis et datasett inneholder opplysninger som naturlig faller i flere av kategoriene?</div>
+<p>Dersom datasettet inneholder både taushetsbelagt informasjon (ikke-offentlig) og det kreves f.eks lisens eller betaling for bruk (transaksjonskostnader) er det et behov for å kunne krysse av på både begrenset og ikke-offentlig. I dag er de tre kategoriene/verdiene alternativer, dvs at det bare kan krysses av for en verdi og ikke kombineres. En tilpasning kan gjøres på ulike måter. Ett forslag er å ha som prinsipp at verdien ikke-offentlig må velges dersom datasettet inneholder skjermede opplysninger og at det etableres et nytt eget felt for krav om betaling knyttet til bruk av datasettet. Et annet forslag er å åpne opp for avkrysning av både begrenset og et av de andre to andre kategoriene.</p>
+</div>
+<div class="paragraph">
+<p>Begge forslagene fører til et behov for tilpasninger i den norske DCAT-standarden. Så vidt vi forstår vil dette ikke være en løsning fordi det vil være i strid med retningslinjene for bruk av DCAT å krysse av for flere av alternativene. Det er tatt til orde for at dersom det er behov for å krysse av for flere alternativer kan det tyde på at datasettet bør deles opp. Arbeidsgruppen tror at det i praksis vil være situasjoner der det både er taushetsbelagte opplysninger og begrensninger som bør komme frem på en eller annen måte samtidig som det ikke er naturlig eller hensiktsmessig å dele opp datasettet. En mulig løsning vil kunne være å krysse av for en av alternativene og dekke behovet for informasjon om krav til betaling under skjermingshjemmel.</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppen anbefaler at de tre verdiene er alternativer som i dag, men at behovet for informasjon om begrensninger løses under skjermingshjemmel, se nedenfor.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_veileder_3"><a class="anchor" href="#_veileder_3"></a>4.4.7. Veileder</h4>
+<div class="paragraph">
+<p>Difi sin veileder for beskrivelse av datasett i henhold til DCAT-AP-NO er under revidering så det har liten verdi å gjengi nåværende veiledningstekst.</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppens anbefaling er å tydeliggjøre noen punkter i veilederen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>de tre verdiene dekker ulike områder og det er rimelig tydelig i hvilken verdi et datasett skal plasseres. Det kan imidlertid være vanskelig for de som skal fylle ut metadata å vurdere hvilken verdi datasettet hører under fordi det krever kunnskap og en rettslig vurdering etter offentleglova, forvaltningsloven mfl. Denne utfordringen kan ikke løses ved å øke antallet verdier, men må løses ved tiltak i forvaltningen i den enkelte etat. Dette bør omtales nærmere i veilederen.</p>
+</li>
+<li>
+<p>veilederen oppdateres i samsvar med beslutningen om nytt felt for betalingsvilkår</p>
+</li>
+<li>
+<p>det må også presiseres at dersom datasettet inneholder noen opplysninger som er taushetsbelagte eller skjermet må verdien ikke-offentlig (skjermet) velges. Kategoriseringen skal gjenspeile det mest begrensede feltet/opplysningen i datasettet. Varianter (utsnitt) av datasettet kan være åpnere ved at man utelater opplysninger som gjør at det opprinnelige datasettet er begrenset eller ikke-offentlig se eksempel på#heading=h.oq9cvdbasqzo[ to datasett fra Brønnøysundregisteret med og uten fødsels- og D-nummer.]</p>
+</li>
+<li>
+<p>ved bruk av verdien "ikke-offentlig" er egenskapen skjermingshjemmel obligatorisk.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beskrivelse-skjermingshjemmel"><a class="anchor" href="#beskrivelse-skjermingshjemmel"></a>4.5. Beskrivelse av skjermingshjemmel</h3>
+<div class="sect3">
+<h4 id="_anbefaling_4"><a class="anchor" href="#_anbefaling_4"></a>4.5.1. Anbefaling</h4>
+<div class="paragraph">
+<p>Dersom datasettet inneholder begrenset eller skjermet informasjon, mener arbeidsgruppen det bør være anbefalt at skjermingshjemmel angis med henvisning til hjemmelsgrunnlaget.</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppen anbefaler å benytte <a href="https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel">feltet “skjermingshjemmel” i DCAT-AP-NO v.1.1</a>. Det er besluttet i siste revisjonsrunde for DCAT-AP-NO at det skal utarbeides et SKOS-vokabular (katalog) med aktuelle skjermingshjemler der det kan være en referanser til lovdata.</p>
+</div>
+<div class="paragraph">
+<p>For å dekke behovet for informasjon om betaling anbefales det at det blir et eget alternativ i SKOS-vokabularet (katalogen) for skjermingshjemler, og derfra en lenke til prisinformasjon i den aktuelle loven, jf reglene i <a href="https://lovdata.no/lov/2006-05-19-16/§8">offl § 8</a>.</p>
+</div>
+<div class="paragraph">
+<p>For å dekke behov for å kunne oppgi skjermingshjemler som ikke står i ovennevnte skos-vokabularet (katalogen), anbefaler arbeidsgruppen å opprette et nytt valgfritt felt der man kan oppgi lenke (URI) til aktuell lov.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_brukerbehovet_3"><a class="anchor" href="#_brukerbehovet_3"></a>4.5.2. Brukerbehovet</h4>
+<div class="paragraph">
+<p>Dersom opplysninger som en offentlig etat har er ikke-offentlige trenger brukerne av felles datakatalog å få kunnskap om hva som er grunnlaget for skjermingen av opplysningene. Dette er vesentlig informasjon for å vurdere om brukerens eget regelverk for innhenting av opplysninger fra andre har hjemler som dekker.</p>
+</div>
+<div class="paragraph">
+<p>Det er også et behov for informasjon om krav på betaling for bruk av datasettet. Denne informasjonen er det viktig at brukeren får tidlig i en utredningsfase ved regel- og tjenesteutvikling og tilrettelegging for kontrollaktiviteter. Det må derfor være mulig å få denne informasjonen i tillegg til skjermingshjemmel. Arbeidsgruppen har ikke mulighet til å angi den konkrete løsningen for denne funksjonaliteten, men forutsetter at det videre arbeidet legges til rette for å dekke brukerbehovet.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_eksempler_3"><a class="anchor" href="#_eksempler_3"></a>4.5.3. Eksempler</h4>
+<div class="paragraph">
+<p>I rollen som saksbehandler i Arkivverket trenger jeg å vite hvilke opplysninger i et arkivverdig datasett som eventuelt er unntatt offentlighet, og i tilfelle på hvilket rettslig grunnlag, for å kunne vurdere innsynsbegjæringer etter at opplysningene er avlevert til Arkivverket og rådigheten overført til Riksarkivaren.</p>
+</div>
+<div class="paragraph">
+<p>I rollen som bruker i SSB av informasjon fra offentlige virksomheter trenger vi å se det juridiske grunnlaget for skjerming av informasjon for å kunne vurdere om vår innhentingshjemmel trumfer deres skjermingshjemmel.</p>
+</div>
+<div class="paragraph">
+<p>I rollen som etterforsker i politiet av en potensiell straffesak trenger jeg det juridiske grunnlaget for skjerming av informasjon for vurdere om vår innhentingshjemmel trumfer deres skjermingshjemmel.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feltdefinisjon_4"><a class="anchor" href="#_feltdefinisjon_4"></a>4.5.4. Feltdefinisjon</h4>
+<div class="paragraph">
+<p>I DCAT-AP-NO 1.1 er “skjermingshjemmel” omtalt slik:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel">https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel</a></p>
+</div>
+<div class="paragraph">
+<p>I tillegg, et nytt felt: valgfritt med URI til lovdata.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_veileder_4"><a class="anchor" href="#_veileder_4"></a>4.5.5. Veileder</h4>
+<div class="paragraph">
+<p>I Difi sin <a href="https://doc.difi.no/data/veileder-for-beskrivelse-av-datasett">veileder for beskrivelse av datasett (DCAT-AP-NO)</a> er begrensninger i tilgangsrettigheter omtalt slik:</p>
+</div>
+<div class="paragraph">
+<div class="title">Innspill til veileder:</div>
+<p>Arbeidsgruppen anbefaler at teksten i veilederen omskrives slik at den gjenspeiler definisjonen av <em>ikke-offentlig</em> i DCAT. Vi mener det er uheldig å bruke overskriften sensitivt innhold fordi dette raskt tolkes til å være sensitive personopplysninger. Det anbefales at man benytter <em>ikke-offentlig</em> eller <em>skjermet</em> som overskrift og tydeliggjør i teksten at dette vil omfatte taushetsbelagte opplysninger som også kan være sensitive personopplysninger osv.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beskrivelse_av_utleveringshjemmel"><a class="anchor" href="#_beskrivelse_av_utleveringshjemmel"></a>4.6. Beskrivelse av utleveringshjemmel</h3>
+<div class="sect3">
+<h4 id="_anbefaling_5"><a class="anchor" href="#_anbefaling_5"></a>4.6.1. Anbefaling</h4>
+<div class="paragraph">
+<p>Arbeidsgruppen anbefaler at det etableres et felt for registrering av hjemmel til utlevering av opplysninger. Feltet bør være anbefalt for datasett som er klassifisert som ikke-offentlige/skjermet. Feltet er anbefalt og skal fylles ut dersom det finnes utleveringshjemmel. Angis som lenke til Lovdata.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_behov"><a class="anchor" href="#_behov"></a>4.6.2. Behov</h4>
+<div class="paragraph">
+<p>Brukerhistoriene viser at informasjon om utleveringshjemmel gjør det enklere for brukere av datakatalogen å se om det er nødvendig med egen hjemmel for innhenting eller om de kan få tillatelse til å bruke opplysninger etter søknad til registereier.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_eksempel_myndighetsutøvelseetterlevelse_og_kontrollformål"><a class="anchor" href="#_eksempel_myndighetsutøvelseetterlevelse_og_kontrollformål"></a>4.6.3. Eksempel - myndighetsutøvelse/etterlevelse og kontrollformål</h4>
+<div class="paragraph">
+<p>Lånekassen har behandlingsgrunnlag, men ikke hjemmel til datafangst direkte fra SKD i innhentingsforskriften til utdanningsstøtteloven for enkelte av opplysningene i folkeregisteret som brukes til kontroller. Lånekassen har søkt Folkeregisteret om utlevering av personopplysningene og fått innvilget utlevering av opplysningene jf vedtak fra Folkeregisteret om utlevering etter <a href="https://lovdata.no/lov/1970-01-16-1/§14">folkeregisterloven § 14</a> jf. <a href="https://lovdata.no/forskrift/2007-11-09-1268/§9-3">forskriften § 9-3</a>. NB - Dette eksempelet vil bortfalle om noe tid fordi folkeregisterloven endres slik at alle etater må etablere egne regler i særlov/forskrifter for å kunne innhente opplysninger fra folkeregisteret.</p>
+</div>
+<div class="paragraph">
+<p>Kartverket trenger i rollen som forvalter av matrikkelen å vite det juridiske grunnlaget for om vi kan hente inn personadresser fra folkeregisteret for videreformidling og til bruk av matrikkeldata.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feltdefinisjon_5"><a class="anchor" href="#_feltdefinisjon_5"></a>4.6.4. Feltdefinisjon</h4>
+<div class="paragraph">
+<p>Det vil være behov for et tillegg i den norske versjonen av DCAT-AP-NO.</p>
+</div>
+<div class="paragraph">
+<div class="title">Forslag til definisjon</div>
+<p>Henvisning til regelverk som begrunner en offentlig virksomhet sin rett eller plikt til å utlevere opplysninger til andre private personer eller juridiske personer.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_veileder_5"><a class="anchor" href="#_veileder_5"></a>4.6.5. Veileder</h4>
+<div class="paragraph">
+<p>Feltet må få en forklarende tekst i veilederen slik at feltet fylles ut på en god måte og det blir enklere å forstå.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_forslag_til_formalisert_henvisning_til_regelverk"><a class="anchor" href="#_forslag_til_formalisert_henvisning_til_regelverk"></a>4.7. Forslag til formalisert henvisning til regelverk</h3>
+<div class="paragraph">
+<p>Gruppen foreslår at i den grad det skal gis henvisninger til regelverk i datakatalogen, bør de så langt det er mulig uttrykkes på en standardisert måte (formalisert). Under er noen forslag til hvordan dette kan løses:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bruke kortlenker i Lovdata på forskjellige nivåer (dette finner en ved å trykke på “dele ikonet” i bestemmelsen og kopiere “kort lenken” som vises.) Her må det vurderes å bruke ELI, for å sikre best mulig samhandlingsevne på tvers av landegrenser, <a href="https://lovdata.no/eli/norsk">https://lovdata.no/eli/norsk</a></p>
+</li>
+<li>
+<p>direkte API mot Lovdata slik at en kan legge inn henvisning direkte i datakatalogens GUI.</p>
+</li>
+<li>
+<p>bruke ferdige lister (SKOS-vokabular) med lenker til Lovdata som utarbeides i felles datakatalog</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Fordelen ved å benytte formaliserte henvisninger til lovverket vil senere gjøre det mulig å finne datasett via lovverket. For jurister og andre som kjenner regelverket og jobber mye med dette antar vi at det kan være et godt hjelpemiddel for å få oversikt f.eks i forbindelse med utredning av lov og forskriftsendringer.</p>
+</div>
+<div class="paragraph">
+<p>Det bør være mulig å henvise til forskjellige nivåer i lovverket. For eksempel henvise til en lov og forskriftsbestemmelse, kapittel/paragraf/ledd/punktum/bokstav eller til hele regelverket. Dette er ikke på plass ennå, men det forutsettes at dette utvikles videre i samarbeid med Lovdata slik at denne funksjonaliteten blir gratis tilgjengelig for alle.</p>
+</div>
+<div class="sect3">
+<h4 id="_brukerbehov_2"><a class="anchor" href="#_brukerbehov_2"></a>4.7.1. Brukerbehov</h4>
+<div class="paragraph">
+<p>I rollen som dataeier i SSB trenger vi å kunne referere enhetlig/standardisert til hjemmelsgrunnlag for skjerming av informasjon for å kunne oppnå høy grad av maskinlesbarhet.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eksempler_på_utfylling_av_foreslåtte_felter"><a class="anchor" href="#_eksempler_på_utfylling_av_foreslåtte_felter"></a>5. Eksempler på utfylling av foreslåtte felter</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_lånekassen"><a class="anchor" href="#_lånekassen"></a>5.1. Lånekassen</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Tittel (datasett)</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Beskrivelse og  behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Utleverings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Tilgangsnivå</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Skjermings-</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utdanningsstøtte til elever og studenter i høyere utdanning i Norge 2016-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vedtak om tildeling av lån og stipend til elever og studenter i høyere utdanning i Norge i undervisningsåret 2016-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/forskrift/2016-02-26-205/§25-1">https://lovdata.no/forskrift/2016-02-26-205/§25-1</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ikke-offentlig</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1967-02-10/§13">https://lovdata.no/lov/1967-02-10/§13</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_statens_pensjonskasse_spk"><a class="anchor" href="#_statens_pensjonskasse_spk"></a>5.2. Statens pensjonskasse (SPK)</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Tittel (datasett)</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Beskrivelse og  behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Utleverings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Tilgangsnivå</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Skjermings- hjemmel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pensjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Treffe vedtak om tjenestepensjon til i hovedsak statsansatte og (kommunale) lærere</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/dokument/NL/lov/1949-07-28-26/KAPITTEL_1#§1">https://lovdata.no/dokument/NL/lov/1949-07-28-26/KAPITTEL_1#§1</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/dokument/NL/lov/1957-07-06-26/KAPITTEL_8#§27">https://lovdata.no/dokument/NL/lov/1957-07-06-26/KAPITTEL_8#§27</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Begrenset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1967-02-10/§13">https://lovdata.no/lov/1967-02-10/§13</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boliglån</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Treffe vedtak om boliglån til medlemmer i Statens pensjonskasse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/dokument/SPH/sph-2017/KAPITTEL_7-5-1?q=boliglån#KAPITTEL_7-5-1">https://lovdata.no/dokument/SPH/sph-20</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/dokument/NL/lov/2016-05-27-14#KAPITTEL_7">kument/NL/lov/2016-05-27-14#KAPITTEL_7</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Begrenset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1967-02-10/§13">https://lovdata.no/lov/1967-02-10/§13</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yrkesskade</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Treffe vedtak om ytelse ved  yrkesskade mm. til statsansatte. Staten som arbeidsgiver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/dokument/SPH/sph-2017/KAPITTEL_7-3-24?q=yrkesskade#KAPITTEL_7-3-24">https://lovdata.no/do</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/dokument/NL/lov/2016-05-27-14#KAPITTEL_7">kument/NL/lov/2016-05-27-14#KAPITTEL_7</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Begrenset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1967-02-10/§13">https://lovdata.no/lov/1967-02-10/§13</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_skatteetaten"><a class="anchor" href="#_skatteetaten"></a>5.3. Skatteetaten</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Tittel (datasett)</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Beskrivelse og  behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Utleverings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Tilgangsnivå</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Skjermings-</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skattegrunnlag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Detaljert informasjon om skattepliktigs formue, inntekt, gjeld og fradrag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/NL/lov/1999-03-26-14">https://lovdata.no/NL/lov/1999-03-26-14</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ikke-offentlig</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/NL/lov/2016-05-27-14/§3-1">https://lovdata.no/NL/lov/2016-05-27-14/§3-1</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_brønnøysundregistrene"><a class="anchor" href="#_brønnøysundregistrene"></a>5.4. Brønnøysundregistrene</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Tittel (datasett)</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Beskrivelse og  behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Utleverings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Tilgangsnivå</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Skjermings-</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enhetsregisteret inkl fødsels- og D-nummer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vedtak om tildeling av organisasjonsnummer (entydig identifikasjon av juridisk person m.m.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1994-06-03-15/§5">https://lovdata.no/lov/1994-06-03-15/§5</a> ,6 og 7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1994-06-03-15/§22">https://lovdata.no/lov/1994-06-03-15/§22</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Begrenset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1994-06-03-15/§22">https://lovdata.no/lov/1994-06-03-15/§22</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Tittel (datasett)</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Beskrivelse og  behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Behandlings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Utleverings-</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Tilgangsnivå</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Skjermings-</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enhetsregisteret ekskl fødsels- og D-nummer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vedtak om tildeling av organisasjonsnummer (entydig identifikasjon av juridisk person m.m.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1994-06-03-15/§5">https://lovdata.no/lov/1994-06-03-15/§5</a> ,6 og 7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lovdata.no/lov/1994-06-03-15/§22">https://lovdata.no/lov/1994-06-03-15/§22</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offentlig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_andre_forhold_som_er_vurdert_av_arbeidsgruppen"><a class="anchor" href="#_andre_forhold_som_er_vurdert_av_arbeidsgruppen"></a>6. Andre forhold som er vurdert av arbeidsgruppen</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_innhentingshjemmel"><a class="anchor" href="#_innhentingshjemmel"></a>6.1. Innhentingshjemmel</h3>
+<div class="paragraph">
+<p>Arbeidsgruppen har vurdert om det bør opprettes et valgfritt felt for registrering av hjemmel for innhenting av opplysningene som datasettet bygger på. Dette kunne gjøres ved en henvisning til lovgrunnlaget.</p>
+</div>
+<div class="paragraph">
+<p>Foranledningen til diskusjonen var at brukerhistoriene viser at brukerne av felleskatalogen kan ha nytte av kunnskap om hvorvidt dataene i datasettet er innhentet uten medvirkning fra borgeren. Kunnskap om dette ville kunne bidra til å tydeliggjøre opplysningenes opprinnelige kilde, og at dataeier har lov til å hente inn opplysningene direkte fra avgiver uten brukerens samtykke.</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppen er imidlertid kommet til at brukerbehovet antagelig dekkes implisitt eller eksplisitt av beskrivelsen av datasettet, og at behovet for å få opplysninger om utleveringshjemmel er mer sentralt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_opphav"><a class="anchor" href="#_opphav"></a>6.2. Opphav</h3>
+<div class="paragraph">
+<p>Arbeidsgruppen har vurdert om datakatalogen bør ha et valgfritt felt som beskriver datasettets opphav.</p>
+</div>
+<div class="paragraph">
+<p>Bakgrunnen for diskusjonen var at det forelå et behov for å kjenne til hvorvidt datasettet inneholder endelige beslutninger/vedtak for å kunne vurdere mulighetene for datafangst. Dette fordi det ved tjenesteutvikling eller implementering av nye regler ofte er forutsatt at vilkår skal dokumenteres med vedtak fattet av et annet offentlig organ.</p>
+</div>
+<div class="paragraph">
+<p>Opplysninger som et forvaltningsorgan har benyttet som grunnlag for sine vedtak, vil være kvalitetssikret. Spørsmålet er om data som ligger i datasettet, men som ikke forvaltningsorganet kan gå god for er riktige, bør merkes på en måte slik at vi som brukere av felles datakatalog allerede ved første oppslag kan forstå at datakvaliteten ikke nødvendigvis er god nok til vårt formål?</p>
+</div>
+<div class="paragraph">
+<p>Dersom datasettets opplysninger skal gjenbrukes for eksempel i forbindelse med en utredning av nye regler eller tjenester, eller vurderes brukt til kontrollformål, vil det være hensiktsmessig å ha kunnskap om hvorvidt dette er sammenstilling av opplysninger som kommer fra borgeren uten dokumentasjon. Datasettet kan for eksempel være en spørreundersøkelse.</p>
+</div>
+<div class="paragraph">
+<p>Arbeidsgruppen er likevel kommet til at behovet ikke er tilstrekkelig stort til at det er nødvendig med et eget felt i datakatalogen.</p>
+</div>
+<div class="paragraph">
+<div class="title">Eksempel:</div>
+<p>Som utreder trenger jeg å vite om informasjonen i datasettet bygger på registereiers <strong>vedtak i medhold av lov</strong> fordi det er forutsatt at det kun er <span class="underline">endelige beslutninger</span> vi kan bruke som dokumentasjon på at vilkårene etter utdanningsstøtteloven med forskrifter er tilstede. Dette gjelder f.eks folketrygdloven, folkeregisterloven, utlendingsloven, vergeloven mfl.</p>
+</div>
+<div class="paragraph">
+<div class="title">Eksempel:</div>
+<p>Familierelasjoner, slektskap, sivilstand, og folkeregistrert adresse. Lånekassen bruker opplysningene i Folkeregisteret om familierelasjoner, sivilstand, folkeregistrert adresse mv som dokumentasjon på antall barn, forsørgeransvar, bosted osv for vurdering av rett til grunnstipend, rentefritak osv.</p>
+</div>
+<div class="paragraph">
+<div class="title">Eksempel:</div>
+<p>Ved behovsprøving av ytelser etter utdanningsstøtteloven vil det være SKD sitt endelig vedtak om beregning av skatt for et kalenderår som skal legges til grunn i saksbehandlingen. Det er derfor viktig for Lånekassen å få informasjon om datasettet inneholder vedtak fra SKD eller om det er den preutfylte skattemedlingen fra SKD til borgeren som ennå ikke er vurdert av SKD  eller innlevert skattemelding fra borgeren som ennå ikke er behandlet SKD.</p>
+</div>
+<div class="paragraph">
+<p><strong>3. part:</strong> Preutfylt skattemelding<br>
+<strong>Brukerinnsamling</strong>: Innlevert skattemelding<br>
+<strong>Vedtak</strong>: Skatteoppgjør</p>
 </div>
 <!-- Google Analytics -->
 <script>
@@ -521,9 +1619,16 @@ ga('send', 'pageview');
 </div>
 </div>
 </div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="http://publications.europa.eu/mdr/resource/authority/access-right/html/access-right-eng.html" class="bare">http://publications.europa.eu/mdr/resource/authority/access-right/html/access-right-eng.html</a>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2020-06-09 12:47:46 UTC
+Sist oppdatert 2022-09-23 12:05:16 UTC
 </div>
 </div>
 </body>

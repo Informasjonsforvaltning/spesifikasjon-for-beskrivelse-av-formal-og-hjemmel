@@ -1,25 +1,38 @@
 include::locale/attributes.adoc[]
-= Spesifikasjonsmal
-:description: Mal for bruk til nye spesifikasjoner som er laga i asciidoc.
+= Spesifikasjon for beskrivelse av formål og hjemmel
+Versjon 1.0
+:description: Spesifikasjon for beskrivelse av formål og hjemmel
 :doctype: book
-:docinfo:
 :icons: font
 :toc: left
 :toclevels: 3
 :sectanchors:
 :imagesdir: images
 :title-logo-image: image:digitaliseringsdirektoratet.png[pdfwidth=30vw]
+:sectnums:
+:sectnumlevels: 4
 
 image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
-Publisert: 2020-03-05
-
-WARNING: Dette er mal-dokument for andre spesifikasjoner.
+*Publisert*: august 2017
 
 include::shared/download.adoc[]
 
-// Innhold her. Feks ei fil pr kapittel:
-include::forord.adoc[]
-include::kapittel_1.adoc[]
+// :leveloffset: +1
+
+// Innhold her.
+
+include::omfang-og-avgrensning.adoc[]
+
+include::normative-referanser.adoc[]
+
+include::begreper-og-definisjoner.adoc[]
+
+include::anbefaling-fra-arbeidsgruppen.adoc[]
+
+include::eksempler-pa-utfylling.adoc[]
+
+include::andre-forhold.adoc[]
+
 
 include::shared/stats.adoc[]
