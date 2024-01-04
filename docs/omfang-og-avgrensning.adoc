@@ -12,7 +12,7 @@ https://www.regjeringen.no/no/dokumenter/digitaliseringsrundskrivet/id2522147/[D
 
 En https://data.norge.no/[felles datakatalog] er nå etablert. Formålet med “felles datakatalog” er å skape en oversikt over data og begreper, for å understøtte digitalisering og regelverksutvikling, samt øvrig forenkling i offentlig sektor. Dette skal bidra til å realisere “kun én gang” (“once only”).
 
-Felles datakatalog skal bygges opp med sett med metadata som beskriver datasettene, i henhold til https://doc.difi.no/dcat-ap-no/[den norske profilen av DCAT- standarden (DCAT-AP-NO)]. Dette er metadata om blant annet kvalitet, begreper, hjemmel og formål, distribusjon/API, slik virksomhetene selv beskriver det. Tanken er at den felles datakatalogen automatisk skal samle/høste slike metadata fra virksomhetenes egne oversikter.
+Felles datakatalog skal bygges opp med sett med metadata som beskriver datasettene, i henhold til https://data.norge.no/specification/dcat-ap-no/v1.1[den norske profilen av DCAT- standarden (DCAT-AP-NO)]. Dette er metadata om blant annet kvalitet, begreper, hjemmel og formål, distribusjon/API, slik virksomhetene selv beskriver det. Tanken er at den felles datakatalogen automatisk skal samle/høste slike metadata fra virksomhetenes egne oversikter.
 
 === Oppgave
 
