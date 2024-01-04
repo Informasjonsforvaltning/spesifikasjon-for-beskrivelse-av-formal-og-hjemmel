@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="generator" content="Asciidoctor 2.0.20">
 <meta name="description" content="Spesifikasjon for beskrivelse av formål og hjemmel">
-<meta name="author" content="Versjon 1.0">
+<meta name="author" content="Versjon 1.0 (utgått)">
 <title>Spesifikasjon for beskrivelse av formål og hjemmel</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -86,10 +86,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -210,13 +210,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -395,7 +392,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -443,7 +440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Spesifikasjon for beskrivelse av formål og hjemmel</h1>
 <div class="details">
-<span id="author" class="author">Versjon 1.0</span><br>
+<span id="author" class="author">Versjon 1.0 (utgått)</span><br>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
@@ -538,20 +535,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Publisert</strong>: august 2017</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tips"></i>
-</td>
-<td class="content">
-Dette dokumentet kan også lastes ned <a href="files/spesifikasjon-for-beskrivelse-av-formal-og-hjemmel.pdf">som PDF</a>.
-Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangler eller lenker som ikke fungerer, ber vi om at man benytter versjonen tilgjengelig på nett for de aktuelle delene.
-</td>
-</tr>
-</table>
+<p><strong>Status</strong>: <mark>utgått</mark><br>
+<strong>Publisert</strong>: august 2017</p>
 </div>
 </div>
 </div>
@@ -581,7 +566,7 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 <p>En <a href="https://data.norge.no/">felles datakatalog</a> er nå etablert. Formålet med “felles datakatalog” er å skape en oversikt over data og begreper, for å understøtte digitalisering og regelverksutvikling, samt øvrig forenkling i offentlig sektor. Dette skal bidra til å realisere “kun én gang” (“once only”).</p>
 </div>
 <div class="paragraph">
-<p>Felles datakatalog skal bygges opp med sett med metadata som beskriver datasettene, i henhold til <a href="https://doc.difi.no/dcat-ap-no/">den norske profilen av DCAT- standarden (DCAT-AP-NO)</a>. Dette er metadata om blant annet kvalitet, begreper, hjemmel og formål, distribusjon/API, slik virksomhetene selv beskriver det. Tanken er at den felles datakatalogen automatisk skal samle/høste slike metadata fra virksomhetenes egne oversikter.</p>
+<p>Felles datakatalog skal bygges opp med sett med metadata som beskriver datasettene, i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/v1.1">den norske profilen av DCAT- standarden (DCAT-AP-NO)</a>. Dette er metadata om blant annet kvalitet, begreper, hjemmel og formål, distribusjon/API, slik virksomhetene selv beskriver det. Tanken er at den felles datakatalogen automatisk skal samle/høste slike metadata fra virksomhetenes egne oversikter.</p>
 </div>
 <div class="sect2">
 <h3 id="_oppgave"><a class="anchor" href="#_oppgave"></a>1.1. Oppgave</h3>
@@ -681,7 +666,7 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 <h2 id="_normative_referanser"><a class="anchor" href="#_normative_referanser"></a>2. Normative referanser</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://doc.difi.no/dcat-ap-no/">Standard for beskrivelse av datasett og datakataloger</a> (DCAT-AP-NO), v.1.1, 11.10.2016.</p>
+<p><a href="https://data.norge.no/specification/dcat-ap-no/v1.1">Standard for beskrivelse av datasett og datakataloger</a> (DCAT-AP-NO), v.1.1, 11.10.2016.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://www.datatilsynet.no/Regelverk/EUs-personvernforordning/hva-betyr/alle-ma-kunne-oppfylle-borgernes-nye-rettigheter/">EUs-personvernforordning</a></p>
@@ -785,7 +770,7 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Behandlingsformål</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: <a href="https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse">«Beskrivelse» i DCAT-AP-NO 1.1</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: <a href="https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-beskrivelse">«Beskrivelse» i DCAT-AP-NO 1.1</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Behandlingsgrunnlag</p></td>
@@ -793,11 +778,11 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilgangsnivå</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: <a href="https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva">«Tilgangsnivå» i DCAT-AP-NO 1.1</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: <a href="https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-tilgangsniva">«Tilgangsnivå» i DCAT-AP-NO 1.1</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skjermingshjemmel</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: <a href="https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel">«Skjermingshjemmel» i DCAT-AP-NO 1.1</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruk: <a href="https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-skjermingshjemmel">«Skjermingshjemmel» i DCAT-AP-NO 1.1</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Utleveringshjemmel</p></td>
@@ -814,7 +799,7 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 <p>Arbeidsgruppen mener at formålet med behandlingen av opplysningene i datasettet må komme tydelig frem, fordi dette er vesentlig informasjon for ny bruker av opplysningene. Arbeidsgruppen har i særlig grad vektlagt behandlingen av personopplysninger fordi gjenbruk av borgerens opplysninger er sentralt for anvendelsen av felles datakatalog.  Vi har derfor valgt å kalle det for behandlingsformål. Det er imidlertid ikke en begrensning til kun personopplysninger, da en god beskrivelse av hva opplysningene i datasettet er brukt til også vil være viktig informasjon for å vurdere gjenbruksverdien.</p>
 </div>
 <div class="paragraph">
-<p>Det foreslås at det ikke innføres et eget felt for formål, men at man bruker feltet <a href="https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse">beskrivelse</a> i DCAT-AP-NO v.1.1. Feltet må være fritekst og obligatorisk (uendret ift. DCAT-AP-NO v.1.1). Dersom dette feltet fylles ut i henhold til veiledningen om bruk av DCAT fra Difi vil det gi en god forklaring på hva som var hensikten med behandlingen av opplysningene i datasettet og hva det inneholder.</p>
+<p>Det foreslås at det ikke innføres et eget felt for formål, men at man bruker feltet <a href="https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-beskrivelse">beskrivelse</a> i DCAT-AP-NO v.1.1. Feltet må være fritekst og obligatorisk (uendret ift. DCAT-AP-NO v.1.1). Dersom dette feltet fylles ut i henhold til veiledningen om bruk av DCAT fra Difi vil det gi en god forklaring på hva som var hensikten med behandlingen av opplysningene i datasettet og hva det inneholder.</p>
 </div>
 <div class="paragraph">
 <p>Vi mener at beskrivelse av datasettet sammen med andre felter i datakatalogen til sammen gir tilstrekkelig informasjon til brukeren av felles datakatalog om hvilket formål avgiverorganet har brukt opplysningene til.</p>
@@ -845,7 +830,7 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 <strong>Status</strong>: Obligatorisk<br></p>
 </div>
 <div class="paragraph">
-<p>kilde: <a href="https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse" class="bare">https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse</a></p>
+<p>kilde: <a href="https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-beskrivelse" class="bare">https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-beskrivelse</a></p>
 </div>
 </div>
 </div>
@@ -1038,7 +1023,7 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 <p>Arbeidsgruppen mener det er viktig å ha et felt som gir informasjon om hvorvidt datasettet inneholder opplysninger som er ikke-offentlig (skjermet) og ikke kan utleveres uten at mottaker har et hjemmelsgrunnlag for å motta opplysningene. Om dataene er begrenset eller ikke-offentlig gir viktig informasjon for den som skal vurdere om datasettet er egnet til sitt bruk.</p>
 </div>
 <div class="paragraph">
-<p>Arbeidsgruppen anbefaler å benytte feltet <a href="https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva">datasett: tilgangsnivå</a> i DCAT-AP-NO v.1.1, som angir hvilket tilgangsnivå datasettet har via en nedtrekksmeny med tre valg, jf. EU-definisjonen.</p>
+<p>Arbeidsgruppen anbefaler å benytte feltet <a href="https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-tilgangsniva">datasett: tilgangsnivå</a> i DCAT-AP-NO v.1.1, som angir hvilket tilgangsnivå datasettet har via en nedtrekksmeny med tre valg, jf. EU-definisjonen.</p>
 </div>
 <div class="paragraph">
 <p>Se <a href="#beskrivelse-skjermingshjemmel">Beskrivelse av skjermingshjemmel</a> for arbeidsgruppens forslag til å angi informasjon om betaling.</p>
@@ -1068,7 +1053,7 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 <p>Arbeidsgruppen mener at DCAT-AP-NO 1.1 “tilgangsnivå” vil dekke brukerbehovet. Dette feltet er beskrevet slik:</p>
 </div>
 <div class="paragraph">
-<p><a href="https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva">https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva</a></p>
+<p><a href="https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-tilgangsniva">https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-tilgangsniva</a></p>
 </div>
 <div class="paragraph">
 <p>EU Publication Office har definert de tre verdiene slik.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>:</p>
@@ -1247,7 +1232,7 @@ Taushetsplikten vil typisk dekke personlige forhold (herunder hemmelig adresse o
 <p>Dersom datasettet inneholder begrenset eller skjermet informasjon, mener arbeidsgruppen det bør være anbefalt at skjermingshjemmel angis med henvisning til hjemmelsgrunnlaget.</p>
 </div>
 <div class="paragraph">
-<p>Arbeidsgruppen anbefaler å benytte <a href="https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel">feltet “skjermingshjemmel” i DCAT-AP-NO v.1.1</a>. Det er besluttet i siste revisjonsrunde for DCAT-AP-NO at det skal utarbeides et SKOS-vokabular (katalog) med aktuelle skjermingshjemler der det kan være en referanser til lovdata.</p>
+<p>Arbeidsgruppen anbefaler å benytte <a href="https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-skjermingshjemmel">feltet “skjermingshjemmel” i DCAT-AP-NO v.1.1</a>. Det er besluttet i siste revisjonsrunde for DCAT-AP-NO at det skal utarbeides et SKOS-vokabular (katalog) med aktuelle skjermingshjemler der det kan være en referanser til lovdata.</p>
 </div>
 <div class="paragraph">
 <p>For å dekke behovet for informasjon om betaling anbefales det at det blir et eget alternativ i SKOS-vokabularet (katalogen) for skjermingshjemler, og derfra en lenke til prisinformasjon i den aktuelle loven, jf reglene i <a href="https://lovdata.no/lov/2006-05-19-16/§8">offl § 8</a>.</p>
@@ -1283,7 +1268,7 @@ Taushetsplikten vil typisk dekke personlige forhold (herunder hemmelig adresse o
 <p>I DCAT-AP-NO 1.1 er “skjermingshjemmel” omtalt slik:</p>
 </div>
 <div class="paragraph">
-<p><a href="https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel">https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel</a></p>
+<p><a href="https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-skjermingshjemmel">https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-skjermingshjemmel</a></p>
 </div>
 <div class="paragraph">
 <p>I tillegg, et nytt felt: valgfritt med URI til lovdata.</p>
@@ -1292,7 +1277,7 @@ Taushetsplikten vil typisk dekke personlige forhold (herunder hemmelig adresse o
 <div class="sect3">
 <h4 id="_veileder_4"><a class="anchor" href="#_veileder_4"></a>4.5.5. Veileder</h4>
 <div class="paragraph">
-<p>I Difi sin <a href="https://doc.difi.no/data/veileder-for-beskrivelse-av-datasett">veileder for beskrivelse av datasett (DCAT-AP-NO)</a> er begrensninger i tilgangsrettigheter omtalt slik:</p>
+<p>I Difi sin <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett">Veileder for beskrivelse av datasett, datatjenester og datakataloger</a> er begrensninger i tilgangsrettigheter omtalt slik:</p>
 </div>
 <div class="paragraph">
 <div class="title">Innspill til veileder:</div>
@@ -1628,7 +1613,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2022-09-23 12:26:30 UTC
+Sist oppdatert 2024-01-04 14:27:29 UTC
 </div>
 </div>
 </body>
