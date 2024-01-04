@@ -13,10 +13,10 @@ Tabellen under inneholder en sammenstilling av anbefalingene fra arbeidsgruppen.
 |===
 |*Beskrivelse av ...*|*Løsningsforslag*
 
-|Behandlingsformål|Bruk: https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse[«Beskrivelse» i DCAT-AP-NO 1.1]
+|Behandlingsformål|Bruk: https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-beskrivelse[«Beskrivelse» i DCAT-AP-NO 1.1]
 |Behandlingsgrunnlag|Bruk: to nye felt
-|Tilgangsnivå|Bruk: https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva[«Tilgangsnivå» i DCAT-AP-NO 1.1]
-|Skjermingshjemmel|Bruk: https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel[«Skjermingshjemmel» i DCAT-AP-NO 1.1]
+|Tilgangsnivå|Bruk: https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-tilgangsniva[«Tilgangsnivå» i DCAT-AP-NO 1.1]
+|Skjermingshjemmel|Bruk: https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-skjermingshjemmel[«Skjermingshjemmel» i DCAT-AP-NO 1.1]
 |Utleveringshjemmel|Bruk: nytt felt
 |===
 
@@ -26,7 +26,7 @@ Tabellen under inneholder en sammenstilling av anbefalingene fra arbeidsgruppen.
 
 Arbeidsgruppen mener at formålet med behandlingen av opplysningene i datasettet må komme tydelig frem, fordi dette er vesentlig informasjon for ny bruker av opplysningene. Arbeidsgruppen har i særlig grad vektlagt behandlingen av personopplysninger fordi gjenbruk av borgerens opplysninger er sentralt for anvendelsen av felles datakatalog.  Vi har derfor valgt å kalle det for behandlingsformål. Det er imidlertid ikke en begrensning til kun personopplysninger, da en god beskrivelse av hva opplysningene i datasettet er brukt til også vil være viktig informasjon for å vurdere gjenbruksverdien.
 
-Det foreslås at det ikke innføres et eget felt for formål, men at man bruker feltet https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse[beskrivelse] i DCAT-AP-NO v.1.1. Feltet må være fritekst og obligatorisk (uendret ift. DCAT-AP-NO v.1.1). Dersom dette feltet fylles ut i henhold til veiledningen om bruk av DCAT fra Difi vil det gi en god forklaring på hva som var hensikten med behandlingen av opplysningene i datasettet og hva det inneholder.
+Det foreslås at det ikke innføres et eget felt for formål, men at man bruker feltet https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-beskrivelse[beskrivelse] i DCAT-AP-NO v.1.1. Feltet må være fritekst og obligatorisk (uendret ift. DCAT-AP-NO v.1.1). Dersom dette feltet fylles ut i henhold til veiledningen om bruk av DCAT fra Difi vil det gi en god forklaring på hva som var hensikten med behandlingen av opplysningene i datasettet og hva det inneholder.
 
 Vi mener at beskrivelse av datasettet sammen med andre felter i datakatalogen til sammen gir tilstrekkelig informasjon til brukeren av felles datakatalog om hvilket formål avgiverorganet har brukt opplysningene til.
 
@@ -48,7 +48,7 @@ I DCAT-AP-NO 1.1 er “beskrivelse” omtalt slik:
 *Kardinalitet*: 1..n +
 *Status*: Obligatorisk +
 
-kilde: https://doc.difi.no/dcat-ap-no/#datasett-beskrivelse
+kilde: https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-beskrivelse
 ****
 Arbeidsgruppen mener at vokabularet dekker behovet og at det ikke er nødvendig med en utvidelse. Dette forutsetter at det fremkommer tydelig i veilederen at formål må omfattes når datasettet skal beskrives.
 
@@ -151,7 +151,7 @@ Teksten i veilederen må harmoniseres med ny personopplysningslov og den norske 
 
 Arbeidsgruppen mener det er viktig å ha et felt som gir informasjon om hvorvidt datasettet inneholder opplysninger som er ikke-offentlig (skjermet) og ikke kan utleveres uten at mottaker har et hjemmelsgrunnlag for å motta opplysningene. Om dataene er begrenset eller ikke-offentlig gir viktig informasjon for den som skal vurdere om datasettet er egnet til sitt bruk.
 
-Arbeidsgruppen anbefaler å benytte feltet https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva[datasett: tilgangsnivå] i DCAT-AP-NO v.1.1, som angir hvilket tilgangsnivå datasettet har via en nedtrekksmeny med tre valg, jf. EU-definisjonen.
+Arbeidsgruppen anbefaler å benytte feltet https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-tilgangsniva[datasett: tilgangsnivå] i DCAT-AP-NO v.1.1, som angir hvilket tilgangsnivå datasettet har via en nedtrekksmeny med tre valg, jf. EU-definisjonen.
 
 Se <<beskrivelse-skjermingshjemmel>> for arbeidsgruppens forslag til å angi informasjon om betaling.
 
@@ -171,7 +171,7 @@ NAV ønsker å forenkle, effektivisere og heve kvaliteten på tjenesten arbeidsr
 
 Arbeidsgruppen mener at DCAT-AP-NO 1.1 “tilgangsnivå” vil dekke brukerbehovet. Dette feltet er beskrevet slik:
 
-https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva[https://doc.difi.no/dcat-ap-no/#datasett-tilgangsniva]
+https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-tilgangsniva[https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-tilgangsniva]
 
 EU Publication Office har definert de tre verdiene slik.footnote:[http://publications.europa.eu/mdr/resource/authority/access-right/html/access-right-eng.html]:
 
@@ -274,7 +274,7 @@ Arbeidsgruppens anbefaling er å tydeliggjøre noen punkter i veilederen:
 
 Dersom datasettet inneholder begrenset eller skjermet informasjon, mener arbeidsgruppen det bør være anbefalt at skjermingshjemmel angis med henvisning til hjemmelsgrunnlaget.
 
-Arbeidsgruppen anbefaler å benytte https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel[feltet “skjermingshjemmel” i DCAT-AP-NO v.1.1]. Det er besluttet i siste revisjonsrunde for DCAT-AP-NO at det skal utarbeides et SKOS-vokabular (katalog) med aktuelle skjermingshjemler der det kan være en referanser til lovdata.
+Arbeidsgruppen anbefaler å benytte https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-skjermingshjemmel[feltet “skjermingshjemmel” i DCAT-AP-NO v.1.1]. Det er besluttet i siste revisjonsrunde for DCAT-AP-NO at det skal utarbeides et SKOS-vokabular (katalog) med aktuelle skjermingshjemler der det kan være en referanser til lovdata.
 
 For å dekke behovet for informasjon om betaling anbefales det at det blir et eget alternativ i SKOS-vokabularet (katalogen) for skjermingshjemler, og derfra en lenke til prisinformasjon i den aktuelle loven, jf reglene i https://lovdata.no/lov/2006-05-19-16/§8[offl § 8].
 
@@ -298,13 +298,13 @@ I rollen som etterforsker i politiet av en potensiell straffesak trenger jeg det
 
 I DCAT-AP-NO 1.1 er “skjermingshjemmel” omtalt slik:
 
-https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel[https://doc.difi.no/dcat-ap-no/#datasett-skjermingshjemmel]
+https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-skjermingshjemmel[https://data.norge.no/specification/dcat-ap-no/v1.1#datasett-skjermingshjemmel]
 
 I tillegg, et nytt felt: valgfritt med URI til lovdata.
 
 ==== Veileder
 
-I Difi sin https://doc.difi.no/data/veileder-for-beskrivelse-av-datasett[veileder for beskrivelse av datasett (DCAT-AP-NO)] er begrensninger i tilgangsrettigheter omtalt slik:
+I Difi sin https://data.norge.no/guide/veileder-beskrivelse-av-datasett[Veileder for beskrivelse av datasett, datatjenester og datakataloger] er begrensninger i tilgangsrettigheter omtalt slik:
 
 
 .Innspill til veileder:

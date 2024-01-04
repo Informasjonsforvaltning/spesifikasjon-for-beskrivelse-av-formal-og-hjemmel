@@ -1,6 +1,6 @@
 include::locale/attributes.adoc[]
 = Spesifikasjon for beskrivelse av formål og hjemmel
-Versjon 1.0
+Versjon 1.0 (utgått)
 :description: Spesifikasjon for beskrivelse av formål og hjemmel
 :doctype: book
 :icons: font
@@ -14,9 +14,10 @@ Versjon 1.0
 
 image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
+*Status*: #utgått# + 
 *Publisert*: august 2017
 
-include::shared/download.adoc[]
+// include::shared/download.adoc[]
 
 // :leveloffset: +1
 
