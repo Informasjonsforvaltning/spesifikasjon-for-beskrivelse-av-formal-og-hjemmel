@@ -6,7 +6,7 @@ Versjon 1.0 (utgått)
 :icons: font
 :toc: left
 :toclevels: 3
-:sectanchors:
+:sectlinks:
 :imagesdir: images
 :title-logo-image: image:digitaliseringsdirektoratet.png[pdfwidth=30vw]
 :sectnums:
