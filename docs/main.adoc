@@ -41,4 +41,4 @@ include::eksempler-pa-utfylling.adoc[]
 include::andre-forhold.adoc[]
 
 
-include::shared/stats.adoc[]
+//include::shared/stats.adoc[]
